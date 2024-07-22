@@ -1,29 +1,42 @@
-import {Container, Nav, Navbar, NavDropdown} from 'react-bootstrap';
+import { useState } from 'react';
+import {Button, Offcanvas} from 'react-bootstrap';
+import {Routes, Route, Link} from 'react-router-dom';
+import './nav.css';
 
 export default function Nav1() {
+    const [show, setShow] = useState(false);
+    const [buttonShow, setButtonShow] = useState("block");
+    const [firstProjectShow, setFirstProjectShow] = useState("none");
+    const handleClose = () => {setShow(false); setButtonShow("block");}
+    const handleShow = () => {setShow(true); setButtonShow("none");}
+
     return (
-        <Navbar expand="lg" className="bg-body-tertiary">
-            <Container>
-            <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
-            <Navbar.Toggle aria-controls="basic-navbar-nav" />
-            <Navbar.Collapse id="basic-navbar-nav">
-                <Nav className="me-auto">
-                <Nav.Link href="#home">Home</Nav.Link>
-                <Nav.Link href="#link">Link</Nav.Link>
-                <NavDropdown title="Dropdown" id="basic-nav-dropdown">
-                    <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-                    <NavDropdown.Item href="#action/3.2">
-                    Another action
-                    </NavDropdown.Item>
-                    <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-                    <NavDropdown.Divider />
-                    <NavDropdown.Item href="#action/3.4">
-                    Separated link
-                    </NavDropdown.Item>
-                </NavDropdown>
-                </Nav>
-            </Navbar.Collapse>
-            </Container>
-        </Navbar>
+        <div>
+            <Button show={buttonShow} onClick={handleShow} style={{
+                    display:buttonShow,
+                    
+                }} className='mockCha'>
+                목  차
+            </Button>
+            <Offcanvas show={show} onHide={handleClose} >
+                <Offcanvas.Header closeButton>
+                    <Offcanvas.Title className='title'>JYH's Portfolio</Offcanvas.Title>
+                </Offcanvas.Header>
+                <Offcanvas.Body>
+                    <p className='bodyList'>About me</p>
+                    <p className='bodyList'>기술 스택</p>
+                    <p className='bodyList'>프로젝트1</p>
+                        <p className='projectDetail'>프로젝트 소개</p>
+                        <p className='projectDetail'>프로젝트 소개</p>
+                        <p className='projectDetail'>프로젝트 소개</p>
+                        <p className='projectDetail'>프로젝트 소개</p>
+                    <p className='bodyList'>프로젝트2</p>
+                        <p className='projectDetail'>프로젝트 소개</p>
+                        <p className='projectDetail'>프로젝트 소개</p>
+                        <p className='projectDetail'>프로젝트 소개</p>
+                        <p className='projectDetail'>프로젝트 소개</p>
+                </Offcanvas.Body>
+            </Offcanvas>
+        </div>
     )
 }

@@ -11,3 +11,21 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+@font-face {
+  font-family: "jamsil";
+  font-weight: normal;
+  src: url("./font/Jamsil.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "nanum";
+  font-weight: normal;
+  src: url("./font/NanumSquareNeo.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "pretendard";
+  font-weight: normal;
+  src: url("./font/Pretendard.ttf") format("truetype");
+}

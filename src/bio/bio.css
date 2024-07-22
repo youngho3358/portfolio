@@ -1,0 +1,62 @@
+.leftBio {
+    border: 1px solid black;
+    height: 400px;
+    margin-top: 100px;
+    margin-right: 90px;
+  }
+  
+  .rightBio {
+    border: 1px solid black;
+    margin-top: 100px;
+  }
+  
+  .aboutMe {
+    text-align: left;
+    font-family: "pretendard";
+    font-size: 30px;
+    font-weight: 900;
+    letter-spacing: 2px;
+    color: rgb(68, 111, 175);
+  }
+
+  .bioTextTitle {
+    text-align: left;
+    font-size: 22px;
+    font-weight: 600;
+    font-family: "pretendard";
+  }
+
+  .bioText {
+    text-align: left;
+    font-family: "pretendard";
+  }
+
+  .contact {
+    text-align: left;
+    font-family: "pretendard";
+    font-size: 26px;
+    letter-spacing: 2px;
+    font-weight: 900;
+    color: rgb(68, 111, 175);
+    margin-bottom: 20px;
+  }
+
+  .contactList {
+    text-align: left;
+    margin-bottom: 5px;
+  }
+
+  .contactInfo {
+    display: inline-block;
+    width: 100px;
+    font-family: "pretendard";
+    font-size: 17px;
+    font-weight: 900;
+    color: rgb(68, 111, 175);
+  }
+
+  .font-pretendard {
+    font-family: "pretendard";
+    text-underline-offset: 2px;
+    color: black;
+  }
