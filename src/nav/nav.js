@@ -25,8 +25,14 @@ export default function Nav1() {
                     <Offcanvas.Title className='title'>JYH's Portfolio</Offcanvas.Title>
                 </Offcanvas.Header>
                 <Offcanvas.Body>
-                    <p className='bodyList'>About me</p>
-                    <p className='bodyList'>기술 스택</p>
+                    <p className='bodyList' onClick={() => {
+                        const aboutMe = document.getElementById('aboutMe');
+                        aboutMe.scrollIntoView({behavior : 'smooth'});
+                    }}>About me</p>
+                    <p className='bodyList' onClick={() => {
+                        const skillBox = document.getElementById('skillBox');
+                        skillBox.scrollIntoView({ behavior: 'smooth' });
+                    }}>기술 스택</p>
                     <p className='bodyList' onClick={() => setFirstProjectShow(!firstProjectShow)}>프로젝트1</p>
                     <div className={`projectDetailList1 ${firstProjectShow ? 'show' : ''}`}>
                         <p className='projectDetail'>프로젝트 소개</p>

@@ -6,17 +6,21 @@ export default function Bio() {
         <div>
             <Container>
                 <Row>
+                    <div id='aboutMe'></div>
                     <Col sm={6} className='leftBio'>
                         <p className='aboutMe'>👨‍💻 ABOUT ME</p>
                         <p className='bioTextTitle'>" 소통을 좋아하는 사람 친화적 개발자 전영호입니다. "</p>
-                        <p className='bioText'>
-                            안녕하세요. Java 백엔드 개발자 전영호입니다.<br/>
+                        <div style={{textAlign:"left", display:"flex"}}>
+                            <img className='photo' src={process.env.PUBLIC_URL + '/myImage.jpg'} alt='증명사진'/>
+                            <p className='bioText'>
+                                안녕하세요. Java 백엔드 개발자 전영호입니다.<br/>
 
-                        </p>
+                            </p>
+                        </div>
                         <p></p>
                     </Col>
                     <Col sm={5} className='rightBio'>
-                        <p className='contact'>CONTACT</p>
+                        <p className='contact'>📌 CONTACT</p>
 
                         <p className='contactList'>
                             <span className='contactInfo'>Phone</span>

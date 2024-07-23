@@ -1,13 +1,13 @@
 .leftBio {
     border: 1px solid black;
     height: 400px;
-    margin-top: 100px;
+    margin-top: 200px;
     margin-right: 90px;
   }
   
   .rightBio {
     border: 1px solid black;
-    margin-top: 100px;
+    margin-top: 200px;
   }
   
   .aboutMe {
@@ -27,8 +27,19 @@
   }
 
   .bioText {
+    display: inline-block;
     text-align: left;
     font-family: "pretendard";
+    margin-top: 20px;
+    margin-left: 30px;
+    border: 1px solid black;
+  }
+
+  .photo {
+    margin-left: 10px;
+    margin-top: 10px;
+    border: 1px solid black;
+    width: 140px;
   }
 
   .contact {
@@ -60,3 +71,5 @@
     text-underline-offset: 2px;
     color: black;
   }
+
+  
