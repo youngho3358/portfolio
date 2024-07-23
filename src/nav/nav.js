@@ -6,7 +6,9 @@ import './nav.css';
 export default function Nav1() {
     const [show, setShow] = useState(false);
     const [buttonShow, setButtonShow] = useState("block");
-    const [firstProjectShow, setFirstProjectShow] = useState("none");
+    const [firstProjectShow, setFirstProjectShow] = useState(false);
+    const [secondProjectShow, setSecondProjectShow] = useState(false);
+    
     const handleClose = () => {setShow(false); setButtonShow("block");}
     const handleShow = () => {setShow(true); setButtonShow("none");}
 
@@ -25,16 +27,20 @@ export default function Nav1() {
                 <Offcanvas.Body>
                     <p className='bodyList'>About me</p>
                     <p className='bodyList'>기술 스택</p>
-                    <p className='bodyList'>프로젝트1</p>
+                    <p className='bodyList' onClick={() => setFirstProjectShow(!firstProjectShow)}>프로젝트1</p>
+                    <div className={`projectDetailList1 ${firstProjectShow ? 'show' : ''}`}>
                         <p className='projectDetail'>프로젝트 소개</p>
                         <p className='projectDetail'>프로젝트 소개</p>
                         <p className='projectDetail'>프로젝트 소개</p>
                         <p className='projectDetail'>프로젝트 소개</p>
-                    <p className='bodyList'>프로젝트2</p>
+                    </div>
+                    <p className='bodyList' onClick={() => setSecondProjectShow(!secondProjectShow)}>프로젝트2</p>
+                    <div className={`projectDetailList2 ${secondProjectShow ? 'show' : ''}`}>
                         <p className='projectDetail'>프로젝트 소개</p>
                         <p className='projectDetail'>프로젝트 소개</p>
                         <p className='projectDetail'>프로젝트 소개</p>
                         <p className='projectDetail'>프로젝트 소개</p>
+                    </div>
                 </Offcanvas.Body>
             </Offcanvas>
         </div>
