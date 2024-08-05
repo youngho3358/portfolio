@@ -7,7 +7,7 @@ const Top = () => {
                 
                 <p className='top-text' style={{fontSize:'100px',margin:'0'}}>
                   안녕하세요.<br></br>
-                프론트 엔드 개발자 김재환입니다.
+                백엔드 개발자 전영호입니다.
                 </p>
         
             </div>
