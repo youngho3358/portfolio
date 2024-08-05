@@ -1,0 +1,218 @@
+/* .archive_img{
+    transition: transform 0.3s ease;
+}
+.archive_img:hover {
+    transform: scale(1.05); 
+  }
+.address {
+    text-decoration: none;
+    font-size: 25px;
+    color: #258DDB;
+}
+.address:hover {
+    text-decoration: underline;
+}
+.archive_img:hover .no-hover{
+    pointer-events: none !important;
+} */
+
+.archiving-container {
+    background: #212529;
+    height: 750px;
+    padding: 50px;
+}
+
+.archiving-header {
+    width: 500px;
+    margin: auto;
+    text-align: center;
+    font-size: 55px;
+    padding-top: 30px;
+    border-bottom: 1px solid gray;
+    font-weight: bold;
+    height: 90px;
+    color: white;
+}
+
+.archiving-content {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: auto;
+    width: 100%;
+    flex-wrap: wrap; /* flex-wrap을 사용하여 아이템이 줄어들도록 설정 */
+}
+
+.archive-card {
+    background-color: #ffffff;
+    width: 650px;
+    height: 470px;
+    box-shadow: 1rem 1rem 1rem 1rem rgb(68 68 68 / 20%);
+    border-radius: 30px;
+    margin-top: 50px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.archive-card:hover {
+    transform: scale(1.05); /* Scale up the image */
+}
+
+.archive-img {
+    width: 580px;
+    margin: auto;
+    text-align: left;
+    height: 145px;
+}
+
+.archive-img img {
+    width: 260px;
+    height: 110px;
+    margin-top: 20px;
+}
+
+.archive-link {
+    width: 525px;
+    text-align: left;
+    margin: auto;
+}
+
+.archive-desc {
+    width: 525px;
+    text-align: left;
+    margin: 25px auto auto auto;
+    font-size: 23px;
+}
+
+.archive-list {
+    width: 525px;
+    text-align: left;
+    margin: 20px auto auto auto;
+    font-size: 23px;
+}
+
+.archive-list li {
+    margin-top: 15px;
+}
+
+.address {
+    text-decoration: none;
+    font-size: 25px;
+    color: #258DDB;
+}
+
+.address:hover {
+    text-decoration: underline;
+}
+
+.no-hover {
+    pointer-events: none !important;
+}
+
+/* 미디어 쿼리 */
+@media (max-width: 1500px) {
+    .archiving-container {
+        padding: 30px;
+        height: 1200px;
+    }
+
+    .archive-card {
+        width: 90%;
+        height: auto;
+    }
+
+    .archive-img img {
+        width: 200px;
+        height: 100px;
+    }
+
+    .archive-desc, .archive-list {
+        width: 90%;
+    }
+
+    .archive-list li {
+        font-size: 20px;
+    }
+}
+@media (max-width: 1200px) {
+    .archiving-container {
+        padding: 30px;
+        height: 1600px;
+    }
+
+    .archive-card {
+        width: 90%;
+        height: auto;
+    }
+
+    .archive-img img {
+        width: 200px;
+        height: 100px;
+    }
+
+    .archive-desc, .archive-list {
+        width: 90%;
+    }
+
+    .archive-list li {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 992px) {
+    .archiving-container {
+        padding: 20px;
+        height: 1200px;
+    }
+
+    .archiving-header {
+        font-size: 45px;
+    }
+
+    .archive-card {
+        width: 95%;
+    }
+
+    .archive-img img {
+        width: 180px;
+        height: 90px;
+    }
+
+    .archive-desc, .archive-list {
+        width: 95%;
+    }
+
+    .archive-list li {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 768px) {
+    .archiving-container {
+        padding: 10px;
+        height: 1200px;
+    }
+
+    .archiving-header {
+        font-size: 40px;
+    }
+
+    .archive-card {
+        width: 100%;
+    }
+
+    .archive-img img {
+        width: 160px;
+        height: 80px;
+    }
+
+    .archive-desc, .archive-list {
+        width: 100%;
+    }
+
+    .archive-list li {
+        font-size: 16px;
+    }
+}
+

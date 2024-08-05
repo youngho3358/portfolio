@@ -1,0 +1,179 @@
+/* .nav {
+    display: flex;
+    margin-top: 5px;
+  }
+  
+  .nav_item {
+    color: white;
+    font-size: 23px;
+    margin-left: 30px;
+  }
+  
+  .nav_item:hover {
+    color: #007aff;
+    cursor: pointer;
+  }
+
+  .header_container {
+    background-color: black;
+    width: 100%;
+    position: fixed;
+    z-index: 2;
+  }
+  .header {
+    width: 1280px;
+    margin: 0 auto;
+    padding-top: 20px;
+    padding-bottom: 25px;
+    border-bottom: 2px solid white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .header_title {
+    color: white;
+    font-size: 27px;
+  }
+
+
+  .nav_item2 {
+    color: black;
+    font-size: 23px;
+    margin-left: 30px;
+  }
+  
+  .nav_item2:hover {
+    color: #007aff;
+    cursor: pointer;
+  }
+  .header_container2{
+    background-color: white;
+    opacity: 0.8;
+    width: 100%;
+    position: fixed;
+    z-index: 2;
+  }
+  .header2{
+    width: 1280px;
+    margin: 0 auto;
+    padding-top: 20px;
+    padding-bottom: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .header_title2{
+    color: black;
+    font-size: 27px;
+  }
+  
+
+
+
+  .header_title:hover {
+    color: #007aff; 
+    cursor: pointer;
+  }
+
+   */
+   .nav {
+    display: flex;
+    margin-top: 5px;
+}
+
+.nav_item {
+    color: white;
+    font-size: 23px;
+    margin-left: 30px;
+}
+
+.nav_item:hover {
+    color: #007aff;
+    cursor: pointer;
+}
+
+.header_container {
+    background-color: black;
+    width: 100%;
+    position: fixed;
+    z-index: 2;
+}
+
+.header {
+    width: 1280px;
+    margin: 0 auto;
+    padding-top: 20px;
+    padding-bottom: 25px;
+    border-bottom: 2px solid white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header_title {
+    color: white;
+    font-size: 27px;
+}
+
+.nav_item2 {
+    color: black;
+    font-size: 23px;
+    margin-left: 30px;
+}
+
+.nav_item2:hover {
+    color: #007aff;
+    cursor: pointer;
+}
+
+.header_container2 {
+    background-color: white;
+    opacity: 0.8;
+    width: 100%;
+    position: fixed;
+    z-index: 2;
+}
+
+.header2 {
+    width: 1280px;
+    margin: 0 auto;
+    padding-top: 20px;
+    padding-bottom: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header_title2 {
+    color: black;
+    font-size: 27px;
+}
+
+.header_title:hover {
+    color: #007aff;
+    cursor: pointer;
+}
+
+/* 미디어 쿼리 */
+@media (max-width: 1280px) {
+    .header, .header2 {
+        width: 100%;
+        padding: 10px 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .header, .header2 {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px 0;
+    }
+    .nav {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 10px;
+    }
+    .nav_item, .nav_item2 {
+        margin: 5px 0;
+    }
+}

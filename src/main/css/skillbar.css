@@ -1,0 +1,70 @@
+/* .skill-bar {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+  
+  .skill-name {
+    flex: 1;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .skill-level-bar {
+    flex: 3;
+    background-color: #f0f0f0;
+    border-radius: 25px;
+    overflow: hidden;
+    margin-left: 15px;
+    position: relative;
+  }
+  
+  .skill-level {
+    background: linear-gradient(to right, #ff8a00, #e52e71);
+    text-align: center;
+    line-height: 30px;
+    color: white;
+    height: 30px;
+    transition: width 0.5s ease-in-out;
+  } */
+  
+  .skill-bar {
+  margin: 10px 0;
+}
+
+.skill-name {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.skill-level-bar {
+  background-color: #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+  height: 30px;
+  margin-top: 5px;
+}
+
+.skill-level {
+  background: linear-gradient(to right, #ff8a00, #e52e71);
+  height: 100%;
+  text-align: right;
+  padding-right: 10px;
+  box-sizing: border-box;
+  color: white;
+  font-weight: bold;
+  border-radius: 10px;
+}
+
+/* 미디어 쿼리 */
+@media (max-width: 768px) {
+  .skill-bar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .skill-level-bar {
+    width: 100%;
+  }
+}

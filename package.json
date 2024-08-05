@@ -1,6 +1,5 @@
 {
-  "homepage": "http://youngho3358.github.io/portfolio",
-  "name": "portfolio",
+  "name": "potfolio",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -12,18 +11,21 @@
     "react": "^18.3.1",
     "react-bootstrap": "^2.10.4",
     "react-dom": "^18.3.1",
+    "react-icons": "^5.2.1",
     "react-router-dom": "^6.25.1",
     "react-scripts": "5.0.1",
+    "styled-components": "^6.1.12",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "predeploy": "npm run build",
-    "deploy": "npx gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
+  "homepage": "https://bam-j.github.io/portfolio/",
   "eslintConfig": {
     "extends": [
       "react-app",

@@ -1,0 +1,141 @@
+.project-container {
+    background: #1d809f;
+    height: 2100px;
+    padding: 50px;
+}
+
+.project-header {
+    width: 500px;
+    margin: auto;
+    text-align: center;
+    font-size: 55px;
+    padding-top: 30px;
+    border-bottom: 1px solid gray;
+    font-weight: bold;
+    height: 90px;
+    color: white;
+}
+
+.project-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+    width: 100%;
+}
+
+.project-card {
+    background-color: #ffffff;
+    width: 1280px;
+    height: 550px;
+    box-shadow: 1rem 1rem 1rem 1rem rgb(68 68 68 / 20%);
+    border-radius: 30px;
+    margin-top: 50px;
+    padding: 20px;
+    display: flex;
+}
+
+.project-card-img {
+    text-align: left;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+.project-card-img img {
+    width: 550px;
+    height: 400px;
+    margin-top: 50px;
+    margin-left: 60px;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+.project-card-desc {
+    font-size: 25px;
+    font-weight: bold;
+    margin-left: 80px;
+    margin-top: 80px;
+    text-align: left;
+}
+
+.project-card-desc label {
+    font-weight: lighter;
+}
+
+.project-card-desc p {
+    font-weight: lighter;
+}
+
+/* 미디어 쿼리 */
+@media (max-width: 1200px) {
+    .project-card {
+        width: 90%;
+        height: auto;
+    }
+
+    .project-card-img img {
+        width: 450px;
+        height: 300px;
+    }
+
+    .project-card-desc {
+        font-size: 22px;
+        margin-left: 40px;
+    }
+}
+
+@media (max-width: 992px) {
+    .project-container {
+        padding: 20px;
+    }
+
+    .project-header {
+        font-size: 45px;
+    }
+
+    .project-card {
+        width: 100%;
+        height: auto;
+    }
+
+    .project-card-img img {
+        width: 350px;
+        height: 250px;
+    }
+
+    .project-card-desc {
+        font-size: 20px;
+        margin-left: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .project-container {
+        padding: 10px;
+    }
+
+    .project-header {
+        font-size: 40px;
+    }
+
+    .project-card {
+        width: 100%;
+        height: auto;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .project-card-img img {
+        width: 300px;
+        height: 200px;
+        margin: 0;
+    }
+
+    .project-card-desc {
+        font-size: 18px;
+        margin: 20px 0 0 0;
+        text-align: center;
+    }
+}
+
+

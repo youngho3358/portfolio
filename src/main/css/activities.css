@@ -1,0 +1,124 @@
+/* .activites_img{
+    transition: transform 0.3s ease;
+}
+.activites_img:hover {
+    transform: scale(1.05); 
+  } */
+ 
+  .activities-container {
+    background: rgba(107, 142, 35, 0.8);
+    height: auto; /* 높이를 자동으로 설정하여 내용에 맞추도록 변경 */
+    padding: 50px;
+}
+
+.activities-header {
+    width: 500px;
+    margin: auto;
+    text-align: center;
+    font-size: 55px;
+    padding-top: 30px;
+    border-bottom: 1px solid gray;
+    font-weight: bold;
+    height: 90px;
+    color: white;
+}
+
+.activities-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+    width: 100%;
+}
+
+.activities-card {
+    background-color: #ffffff;
+    width: 80%;
+    height: auto; /* 높이를 자동으로 설정하여 내용에 맞추도록 변경 */
+    box-shadow: 1rem 1rem 1rem 1rem rgb(68 68 68 / 20%);
+    border-radius: 30px;
+    margin-top: 30px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.activities-img {
+    text-align: left;
+    margin-left: 20px;
+}
+
+.activities-img img {
+    width: 100px;
+    height: 120px;
+}
+
+.activities-description {
+    font-size: 25px;
+    font-weight: bold;
+    margin-left: 30px;
+    text-align: left;
+}
+
+.activities-description label {
+    font-weight: lighter;
+}
+
+/* 미디어 쿼리 */
+@media (max-width: 1200px) {
+    .activities-container {
+        padding: 30px;
+    }
+
+    .activities-card {
+        width: 90%;
+        height: auto;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .activities-img {
+        margin: 0 auto;
+    }
+
+    .activities-description {
+        margin: 10px auto;
+    }
+}
+
+@media (max-width: 992px) {
+    .activities-container {
+        padding: 20px;
+    }
+
+    .activities-header {
+        font-size: 45px;
+    }
+
+    .activities-card {
+        width: 95%;
+    }
+
+    .activities-description {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .activities-container {
+        padding: 10px;
+    }
+
+    .activities-header {
+        font-size: 40px;
+    }
+
+    .activities-card {
+        width: 100%;
+    }
+
+    .activities-description {
+        font-size: 18px;
+    }
+}

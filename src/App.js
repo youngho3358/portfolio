@@ -1,19 +1,16 @@
-import Nav1 from './nav/nav.js';
-import Bio from './bio/bio.js';
-import Skills from './skills/skills.js'
 import './App.css';
-import React, { useRef } from 'react';
-
+import {Route, Routes} from 'react-router-dom';
+import Potfolio_form from './main/js/potfolio_form';
 
 function App() {
-  const skillBoxRef = useRef(null);
-
   return (
-    <div className="App">
-      <Nav1 skillBoxRef={skillBoxRef}/>
-      <Bio skillBoxRef={skillBoxRef}/>
-      <Skills skillBoxRef={skillBoxRef}/>
-    </div>
+    <>
+      <div className='App'>
+        <Routes>
+          <Route path='/portfolio' element={<Potfolio_form></Potfolio_form>}></Route>
+        </Routes>
+      </div>
+    </>
   );
 }
 
