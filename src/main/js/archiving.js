@@ -82,14 +82,17 @@ const Archiving = forwardRef((props, ref) => {
             <div className="archiving-content">
                 <div className='archive-card'>
                     <div className="archive-img">
-                        <img src={`${process.env.PUBLIC_URL}/img/version_control/github.png`} alt='github' />
+                        <a href='https://github.com/youngho3358'>
+                            <img src={`${process.env.PUBLIC_URL}/img/version_control/github.png`} alt='github' />
+                        </a>
                     </div>
                     <div className="archive-link">
-                        <a className='address' href='https://github.com/KimJaeHwan98' >https://github.com/KimJaeHwan98</a>
+                        <a className='address' href='https://github.com/youngho3358' >https://github.com/youngho3358</a>
                     </div>
                     <div className="archive-desc">
                         <label className='no-hover'>소스 코드 저장소</label>입니다.
                     </div>
+                    <br/>
                     <ul className="archive-list">
                         <li>과거 프로젝트, 프로그램, 앱의 소스 코드</li>
                         <li>혼자서 코딩 연습을 위해 끄적이던 소스 코드</li>

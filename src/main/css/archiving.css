@@ -63,12 +63,10 @@
     width: 580px;
     margin: auto;
     text-align: left;
-    height: 145px;
 }
 
 .archive-img img {
     width: 260px;
-    height: 110px;
     margin-top: 20px;
 }
 
@@ -124,7 +122,6 @@
 
     .archive-img img {
         width: 200px;
-        height: 100px;
     }
 
     .archive-desc, .archive-list {
@@ -148,7 +145,6 @@
 
     .archive-img img {
         width: 200px;
-        height: 100px;
     }
 
     .archive-desc, .archive-list {
@@ -176,7 +172,6 @@
 
     .archive-img img {
         width: 180px;
-        height: 90px;
     }
 
     .archive-desc, .archive-list {
@@ -204,7 +199,6 @@
 
     .archive-img img {
         width: 160px;
-        height: 80px;
     }
 
     .archive-desc, .archive-list {
