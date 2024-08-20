@@ -35,35 +35,59 @@
     display: flex;
 }
 
-.project-card-img {
-    text-align: left;
-    margin-left: 20px;
-    margin-top: 20px;
-}
-
-.project-card-img img {
-    width: 550px;
-    height: 400px;
-    margin-top: 50px;
-    margin-left: 60px;
-    border: 2px solid black;
-    border-radius: 10px;
-}
-
-.project-card-desc {
-    font-size: 25px;
-    font-weight: bold;
+.project1-card-desc {
     margin-left: 80px;
-    margin-top: 80px;
+    margin-top: 50px;
     text-align: left;
 }
 
-.project-card-desc label {
-    font-weight: lighter;
+.project2-card-desc {
+    margin-left: 80px;
+    margin-top: 30px;
+    text-align: left;
 }
 
-.project-card-desc p {
-    font-weight: lighter;
+.project1-video {
+    border: 1px solid gray;
+    border-radius: 5px;
+    margin-top: 50px;
+    margin-left: 40px;
+    height: 450px;
+}
+
+.project-title {
+    font-size: 35px;
+    font-weight: 900;
+    margin-bottom: 0px;
+}
+
+.project-period {
+    margin-top: 10px;
+    font-size: 20px;
+}
+
+.project-detail {
+    margin: 40px 0px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.project-url-text {
+    color: gray;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.project-address {
+    color: #1c89ab;
+    text-decoration: none;
+    margin-left: 15px;
+    font-size: 15px;
+}
+
+.project-address:hover {
+    color: #1c5769;
+    text-decoration: underline;
 }
 
 /* 미디어 쿼리 */

@@ -53,49 +53,54 @@ const Project = forwardRef((props, ref) => {
                 <div>PROJECTS</div>
             </div>
             <div className="project-content">
+
                 <div className="project-card">
                     <div className="project-card-img">
-                        <img src={`${process.env.PUBLIC_URL}/img/project/project1.png`} alt='project1' />
+                        <video className='project1-video' src={`${process.env.PUBLIC_URL}/video/coin_investment.mp4`} alt='coin_investment' controls/>
+                        {/* <img src={`${process.env.PUBLIC_URL}/img/project/project1.png`} alt='project1' /> */}
                     </div>
-                    <div className="project-card-desc">
-                        KREAM 웹 사이트 클론 프로젝트<br />
-                        <label>2024.06.02 ~ 2024.08.02</label>
-                        <p>KREAM 웹 사이트 클론 프로젝트를 진행하였습니다.(React)<br/></p>
-                        <p>크림 웹 사이트 : </p>
-                        <a className='address' href='https://kream.co.kr/' >https://kream.co.kr/</a>
+                    <div className="project1-card-desc">
+                        <p className='project-title'>COIN_INVESTMENT</p>
+                        <p className='project-period'>2024.04.11 ~ 2024.04.26</p>
+                        <p className='project-detail'>
+                            Upbit 사이트에서 제공되는 코인의 가격을 기준으로 사용자가<br/>
+                            코인을 가상투자 할 수 있는 사이트를 구현하였습니다.<br/><br/>
+                            프로젝트는 node.js를 사용하여 구현되었습니다.
+                        </p>
+                        <p className='project-url-text'>GitHub 코드 : </p>
+                        <a className='project-address' href='https://github.com/youngho3358/coin_investment' >GitHub Repository로 이동하기</a>
                         <br/>
-                        <p>깃허브 소스 코드 : </p>
-                        <a className='address' href='https://github.com/dlxodud123/fream_front' >https://github.com/dlxodud123/fream_front</a>
-                        <p>ppt : </p>
-                        <a className='address' href='https://docs.google.com/presentation/d/1FhtH7zdxHCUmf0rAK6oeOYmYHFsV6ROCL8g23di3FOE/edit#slide=id.g2ef1808f267_1_174' >ppt url</a>
+                        <br/>
+                        <p className='project-url-text'>자세한 포트폴리오 내용 (p.5 ~ p.16) : </p>
+                        <a className='project-address' href='https://docs.google.com/presentation/d/15SMR5FeC9Yr3w2w6wLuptSZDr3obwAIbMujhV3JVEro/#slide=id.g2f211914f85_0_3' >포트폴리오로 보러가기</a>
                     </div>
                 </div>
+
                 <div className="project-card">
                     <div className="project-card-img">
-                        <img src={`${process.env.PUBLIC_URL}/img/project/project2.png`} alt='project1' />
+                        <video className='project1-video' src={`${process.env.PUBLIC_URL}/video/coin_investment.mp4`} alt='coin_investment' controls/>
+                        {/* <img src={`${process.env.PUBLIC_URL}/img/project/project1.png`} alt='project1' /> */}
                     </div>
-                    <div className="project-card-desc">
-                       협업 툴 프로젝트<br />
-                        <label>2024.04.11 ~ 2024.04.25</label>
-                        <p>협업 툴 프로젝트 진행하였습니다.(node.js)</p>
-                        <p>깃허브 소스 코드 : </p>
-                        <a className='address' href='https://github.com/KimJaeHwan98/ForWebPrjBs' >https://github.com/KimJaeHwan98/ForWebPrjBs</a>
-                        <p>ppt : </p>
-                        <a className='address' href='https://docs.google.com/presentation/d/1FhtH7zdxHCUmf0rAK6oeOYmYHFsV6ROCL8g23di3FOE/edit#slide=id.g2ef1808f267_1_174' >ppt url</a>
-                    </div>
-                </div>
-                <div className="project-card">
-                    <div className="project-card-img">
-                        <img src={`${process.env.PUBLIC_URL}/img/project/project3.png`} alt='project1' />
-                    </div>
-                    <div className="project-card-desc">
-                        포트폴리오 프로젝트<br />
-                        <label>2024.07.25 ~ 2024.07.30</label>
-                        <p>입사지원 포트폴리오 제작 프로젝트 진행하였습니다.(React)</p>
-                        <p>깃허브 소스 코드 : </p>
-                        <a className='address' href='https://github.com/KimJaeHwan98/portfolio' >https://github.com/KimJaeHwan98/portfolio</a>
+                    <div className="project2-card-desc">
+                        <p className='project-title'>Muzinut</p>
+                        <p className='project-period'>2024.06.02 ~ 2024.08.02</p>
+                        <p className='project-detail'>
+                            뮤지션들이 자유롭게 자신의 음악 작업물을 게시하고<br/>
+                            게시판을 통해 팬들과 소통할 수 있으며 리스너들은 게시된<br/>
+                            음원을 스트리밍하여 들을 수 있는 사이트를 구현하였습니다.<br/><br/>
+                            프로젝트는 Spring Framework 와 Next.js를 사용하여<br/>
+                            구현되었습니다.
+                        </p>
+                        <p className='project-url-text'>GitHub 코드 : </p>
+                        <a className='project-address' href='https://github.com/youngho3358/Muzinut' >GitHub Repository로 이동하기</a>
+                        <br/>
+                        <br/>
+                        <p className='project-url-text'>자세한 포트폴리오 내용 (p.17 ~ p.xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx) : </p>
+                        <a className='project-address' href='https://docs.google.com/presentation/d/15SMR5FeC9Yr3w2w6wLuptSZDr3obwAIbMujhV3JVEro/#slide=id.g2f211914f85_0_231' >포트폴리오로 보러가기</a>
                     </div>
                 </div>
+                
+                
             </div>
         </div>
     );
