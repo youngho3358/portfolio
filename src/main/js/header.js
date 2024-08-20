@@ -76,7 +76,7 @@ const Header = ({onAboutMeClick, onSkillsClick, onArchivingClick, onProjectClick
                     <p className="nav_item2" onClick={onAboutMeClick}>About Me</p>
                     <p className="nav_item2" onClick={onSkillsClick}>Skills</p>
                     <p className="nav_item2" onClick={onArchivingClick}>Archiving</p>
-                    <p className="nav_item2" onClick={onProjectClick}>Project</p>
+                    <p className="nav_item2" onClick={onProjectClick}>Projects</p>
                     <p className="nav_item2" onClick={onActivitiesClick}>Activities</p>
                   </div>
                 </div>
@@ -92,7 +92,7 @@ const Header = ({onAboutMeClick, onSkillsClick, onArchivingClick, onProjectClick
                   <p className="nav_item" onClick={onAboutMeClick}>About Me</p>
                   <p className="nav_item" onClick={onSkillsClick}>Skills</p>
                   <p className="nav_item" onClick={onArchivingClick}>Archiving</p>
-                  <p className="nav_item" onClick={onProjectClick}>Project</p>
+                  <p className="nav_item" onClick={onProjectClick}>Projects</p>
                   <p className="nav_item" onClick={onActivitiesClick}>Activities</p>
                 </div>
               </div>
@@ -100,18 +100,6 @@ const Header = ({onAboutMeClick, onSkillsClick, onArchivingClick, onProjectClick
           </>
         )
       }
-      {/* <div className="header_container">
-        <div className="header">
-          <p className="header_title">KJH's Portfolio</p>
-          <div className="nav">
-            <p className="nav_item" onClick={onAboutMeClick}>About Me</p>
-            <p className="nav_item" onClick={onSkillsClick}>Skills</p>
-            <p className="nav_item" onClick={onArchivingClick}>Archiving</p>
-            <p className="nav_item" onClick={onProjectClick}>Project</p>
-            <p className="nav_item" onClick={onActivitiesClick}>Activities</p>
-          </div>
-        </div>
-      </div> */}
     </>
   );
 }

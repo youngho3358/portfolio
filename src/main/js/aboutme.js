@@ -11,7 +11,7 @@ const Aboutme = forwardRef((props, ref) => {
   return (
     <div ref={ref} id="aboutme-section" className="aboutme-container">
       <div className="aboutme-title">
-        <div>ABOUT ME</div>
+        <div style={{'borderBottom' : '1px solid gray'}}>ABOUT ME</div>
         <div className='face-section'>
           <img className='face' alt='증명사진' src={`${process.env.PUBLIC_URL}/img/face/white_face.jpeg`}/>
           <p className='introduce'>안녕하세요.<br/> 꾸준함을 무기로 성장해나가는 전영호 입니다.</p>

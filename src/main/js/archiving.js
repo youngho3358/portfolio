@@ -83,40 +83,44 @@ const Archiving = forwardRef((props, ref) => {
                 <div className='archive-card'>
                     <div className="archive-img">
                         <a href='https://github.com/youngho3358'>
-                            <img src={`${process.env.PUBLIC_URL}/img/version_control/github.png`} alt='github' />
+                            <img className='archive-content' style={{'width' : '220px'}} src={`${process.env.PUBLIC_URL}/img/version_control/github.png`} alt='github' />
                         </a>
                     </div>
                     <div className="archive-link">
                         <a className='address' href='https://github.com/youngho3358' >https://github.com/youngho3358</a>
                     </div>
                     <div className="archive-desc">
-                        <label className='no-hover'>소스 코드 저장소</label>입니다.
+                        <label className='no-hover'>소스 코드 저장소입니다.</label>
                     </div>
                     <br/>
                     <ul className="archive-list">
-                        <li>과거 프로젝트, 프로그램, 앱의 소스 코드</li>
-                        <li>혼자서 코딩 연습을 위해 끄적이던 소스 코드</li>
-                        <li>학부 시절 수강한 수업들의 코딩 과제 소스 코드</li>
+                        <li>저의 GitHub 코드 저장소 입니다.</li>
+                        <li>연습용으로 진행했던 미니 프로젝트의 코드</li>
+                        <li>과거에 진행한 프로젝트의 세부코드</li>
+                        <li>현재 진행중인 프로젝트의 코드</li>
                     </ul>
                 </div>
-{/* 
+
                 <div className='archive-card'>
                     <div className="archive-img">
-                        <img src={`${process.env.PUBLIC_URL}/img/archiving/tstory.png`} alt='tistory' />
+                        <a href='https://youngho3358.tistory.com'>
+                            <img className='archive-content' style={{'marginLeft' : '10px'}} src={`${process.env.PUBLIC_URL}/img/archiving/tistory.png`} alt='github' />
+                        </a>
                     </div>
                     <div className="archive-link">
-                        <a className='address' href='https://tistory.com' >tistory.com</a>
+                        <a className='address' href='https://youngho3358.tistory.com' >https://youngho3358.tistory.com</a>
                     </div>
                     <div className="archive-desc">
-                        <label className='no-hover'>공부 및 지식 공유 목적의 블로그</label>입니다.
+                        <label className='no-hover'>기술 블로그입니다.</label>
                     </div>
+                    <br/>
                     <ul className="archive-list">
-                        <li>공부한 것을 진정한 나의 것으로 만들기 위한 기록</li>
-                        <li>개발자의 길을 걸으며 공부한 개발 관련 지식 정리</li>
-                        <li>학부 시절 배운 전공 수업들의 내용 복습 및 정리</li>
-                        <li>지식 공유를 통한 선한 영향력 행사</li>
+                        <li>백엔드를 학습하면서 작성한 소스코드 필기</li>
+                        <li>프론트엔드를 학습하면서 작성한 소스코드 필기</li>
+                        <li>OS를 학습하면서 작성한 소스코드 필기</li>
+                        <li>개발 과정동안 발생한 문제의 해결 방안</li>
                     </ul>
-                </div> */}
+                </div>
             </div>
         </div>
     )
