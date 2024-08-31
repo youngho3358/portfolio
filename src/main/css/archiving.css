@@ -1,24 +1,6 @@
-/* .archive_img{
-    transition: transform 0.3s ease;
-}
-.archive_img:hover {
-    transform: scale(1.05); 
-  }
-.address {
-    text-decoration: none;
-    font-size: 25px;
-    color: #258DDB;
-}
-.address:hover {
-    text-decoration: underline;
-}
-.archive_img:hover .no-hover{
-    pointer-events: none !important;
-} */
-
 .archiving-container {
     background: #212529;
-    height: 750px;
+    height: auto;
     padding: 50px;
 }
 
