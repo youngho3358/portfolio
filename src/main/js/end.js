@@ -22,13 +22,6 @@ const End = forwardRef((props, ref) => {
         backgroundSize: zoomLevel <0.75 ? "contain" : "cover", /* 확대 수준에 따라 조정 */
         backgroundPosition: "center" /* 중앙에 배치 */
       }}>
-        {/* <p className="end-main-text" >
-          감사합니다.
-        </p>
-        <p className="end-sub-text" 
-        >
-          Thank You
-        </p> */}
       </div>
   );
 });
