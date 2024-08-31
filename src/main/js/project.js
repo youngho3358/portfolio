@@ -62,7 +62,7 @@ const Project = forwardRef((props, ref) => {
                     </div>
                     <div className="project3-card-desc">
                         <p className='project-title'>Portfolio</p>
-                        <p className='project-period'>2024.08.10 ~ 2024.08.30</p>
+                        <p className='project-period'>2024.08.15 ~ 2024.08.30</p>
                         <p className='project-detail'>
                             직접 구현한 프로젝트들을 정리하여 포트폴리오 사이트를<br/>
                             React.js 를 기반으로 구현하였습니다.<br/>
