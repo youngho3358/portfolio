@@ -14,7 +14,14 @@ const Aboutme = forwardRef((props, ref) => {
         <div style={{'borderBottom' : '1px solid gray'}}>ABOUT ME</div>
         <div className='face-section'>
           <img className='face' alt='증명사진' src={`${process.env.PUBLIC_URL}/img/face/white_face.jpeg`}/>
-          <p className='introduce'>안녕하세요.<br/> 꾸준함을 무기로 성장해나가는 전영호 입니다.</p>
+          <p className='introduce'>
+            안녕하세요.<br/>
+            새로운 것을 배우고 기록하는 것을 좋아하는<br/>
+            신입 개발자 전영호입니다.<br/>
+            <br/>
+            <a href='https://youngho3358.tistory.com/' className='blog'>블로그</a> 를 클릭하시면 제가 학습며 정리해둔<br/>
+            포스트 내용을 확인하실 수 있습니다.<br/>
+          </p>
         </div>
       </div>
 

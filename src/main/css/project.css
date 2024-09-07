@@ -53,6 +53,12 @@
     text-align: left;
 }
 
+.project4-card-desc {
+    margin-left: 80px;
+    margin-top: 90px;
+    text-align: left;
+}
+
 .project-video {
     border: 1px solid gray;
     border-radius: 5px;

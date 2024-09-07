@@ -27,7 +27,7 @@ const Project = forwardRef((props, ref) => {
                         <br/>
                         <br/>
                         <p className='project-url-text'>자세한 포트폴리오 내용</p>
-                        <a className='project-address' href='https://docs.google.com/presentation/d/1ON_78aC0QKPjjZIxxK3ApBAt1zkyDrKiNnrYdJNBsUs/edit?usp=sharing' >포트폴리오로 보러가기</a>
+                        <a className='project-address' href='https://drive.google.com/file/d/1_Z2nB5tADp9p8tJvUBekwA84BjOWh_D4/view?usp=drive_link' >포트폴리오로 보러가기</a>
                     </div>
                 </div>
 
@@ -51,14 +51,13 @@ const Project = forwardRef((props, ref) => {
                         <br/>
                         <br/>
                         <p className='project-url-text'>자세한 포트폴리오 내용</p>
-                        <a className='project-address' href='https://docs.google.com/presentation/d/1spGTYBFq0-sg8WIca2C1dYYSpg3QIzLhJNCzWgcpjFI/edit?usp=sharing' >포트폴리오로 보러가기</a>
+                        <a className='project-address' href='https://drive.google.com/file/d/1SEajSp0PqzpSqfz39PhYArISyhvCuyoI/view?usp=drive_link' >포트폴리오로 보러가기</a>
                     </div>
                 </div>
 
                 <div className="project-card">
                     <div className="project-card-img">
-                        {/* <video className='project-video' src={`${process.env.PUBLIC_URL}/video/muzinut.mp4`} alt='portfolio' controls/> */}
-                        <div className='project-video' style={{width:'694.87px', height:'230px', textAlign:'center', paddingTop:'220px', fontSize:'25px', fontWeight:'bold'}}> - 구현 중 -</div>
+                        <video className='project-video' src={`${process.env.PUBLIC_URL}/video/portfolio.mp4`} alt='portfolio' controls/>
                     </div>
                     <div className="project3-card-desc">
                         <p className='project-title'>Portfolio</p>
@@ -71,7 +70,7 @@ const Project = forwardRef((props, ref) => {
                             Github Page 에 업로드하여 배포하였습니다.<br/>
                         </p>
                         <p className='project-url-text'>GitHub 코드 : </p>
-                        <a className='project-address' href='https://github.com/youngho3358/Muzinut' >GitHub Repository로 이동하기</a>
+                        <a className='project-address' href='https://github.com/youngho3358/portfolio' >GitHub Repository로 이동하기</a>
                     </div>
                 </div>
 
@@ -80,10 +79,10 @@ const Project = forwardRef((props, ref) => {
                         {/* <video className='project1-video' src={`${process.env.PUBLIC_URL}/video/muzinut.mp4`} alt='muzinut' controls/> */}
                         <div className='project-video' style={{width:'694.87px', height:'230px', textAlign:'center', paddingTop:'220px', fontSize:'25px', fontWeight:'bold'}}> - 구현 중 -</div>
                     </div>
-                    <div className="project2-card-desc">
+                    <div className="project4-card-desc">
                         <p className='project-title' style={{fontSize:'30px', marginBottom:'0px'}}>COIN_INVESTMENT</p>
                         <p className='project-title' style={{fontSize:'30px', marginTop:'0px'}}>Backend Code Migration</p>
-                        <p className='project-period'>2024.06.20 ~ now</p>
+                        <p className='project-period'>2024.08.20 ~ now</p>
                         <p className='project-detail'>
                             기존에 javascript 로 작성되었던 코드를 백엔드 코드와<br/>
                             프론트 엔트 코드로 분리하여 코드 마이그레이션을 진행중입니다.<br/>
@@ -92,11 +91,7 @@ const Project = forwardRef((props, ref) => {
                             기능 추가 구현 및 CI/CD 를 목표로 진행중인 프로젝트입니다.<br/>
                         </p>
                         <p className='project-url-text'>GitHub 코드 : </p>
-                        <a className='project-address' href='https://github.com/youngho3358/Muzinut' >GitHub Repository로 이동하기</a>
-                        <br/>
-                        <br/>
-                        <p className='project-url-text'>자세한 포트폴리오 내용 (p.17 ~ p.xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx) : </p>
-                        <a className='project-address' href='https://docs.google.com/presentation/d/15SMR5FeC9Yr3w2w6wLuptSZDr3obwAIbMujhV3JVEro/#slide=id.g2f211914f85_0_231' >포트폴리오로 보러가기</a>
+                        <a className='project-address' href='https://github.com/youngho3358/coin_be' >GitHub Repository로 이동하기</a>
                     </div>
                 </div>
                 
