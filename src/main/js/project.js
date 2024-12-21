@@ -76,22 +76,28 @@ const Project = forwardRef((props, ref) => {
 
                 <div className="project-card">
                     <div className="project-card-img">
-                        {/* <video className='project1-video' src={`${process.env.PUBLIC_URL}/video/muzinut.mp4`} alt='muzinut' controls/> */}
-                        <div className='project-video' style={{width:'694.87px', height:'230px', textAlign:'center', paddingTop:'220px', fontSize:'25px', fontWeight:'bold'}}> - 구현 중 -</div>
+                        <video className='project-video' src={`${process.env.PUBLIC_URL}/video/randomchat.mp4`} alt='muzinut' controls/>
+                        {/* <div className='project-video' style={{width:'694.87px', height:'230px', textAlign:'center', paddingTop:'220px', fontSize:'25px', fontWeight:'bold'}}> - 구현 중 -</div> */}
                     </div>
                     <div className="project4-card-desc">
-                        <p className='project-title' style={{fontSize:'30px', marginBottom:'0px'}}>COIN_INVESTMENT</p>
-                        <p className='project-title' style={{fontSize:'30px', marginTop:'0px'}}>Backend Code Migration</p>
-                        <p className='project-period'>2024.08.20 ~ now</p>
+                        <p className='project-title' style={{fontSize:'30px', marginBottom:'0px'}}>Randomchat</p>
+                        <p className='project-period'>2024.11.15 ~ now</p>
                         <p className='project-detail'>
-                            기존에 javascript 로 작성되었던 코드를 백엔드 코드와<br/>
-                            프론트 엔트 코드로 분리하여 코드 마이그레이션을 진행중입니다.<br/>
+                            현재 구현중인 랜덤한 유저와 채팅할 수 있는 사이트입니다.<br/>
                             <br/>
-                            단순히 코드의 언어만 변경하는 것이 아닌 사이트의 자체의<br/>
-                            기능 추가 구현 및 CI/CD 를 목표로 진행중인 프로젝트입니다.<br/>
+                            Front-End는 React를 사용해 구현하였으며,<br/>
+                            Back-End는 Spring Boot를 사용해 구현하였습니다.<br/>
+                            <br/>
+                            Docker Compose로 컨테이너를 분리해 구현하였으며<br/>
+                            Nginx의 리버스 프록시 기능을 통해 도메인 주소 경로별로<br/>
+                            백엔드, 프론트엔드 경로를 분리하여 구현하였습니다.
                         </p>
-                        <p className='project-url-text'>GitHub 코드 : </p>
-                        <a className='project-address' href='https://github.com/youngho3358/coin_be' >GitHub Repository로 이동하기</a>
+                        <p className='project-url-text'>Back-End GitHub 코드 : </p>
+                        <a className='project-address' href='https://github.com/youngho3358/RandomChat-be' >GitHub Repository로 이동하기</a>
+                        <p className='project-url-text'>Front-End GitHub 코드 : </p>
+                        <a className='project-address' href='https://github.com/dlxodud123/randomchat_front' >GitHub Repository로 이동하기</a>
+                        <p className='project-url-text'>웹 주소 : </p>
+                        <a className='project-address' href='http://www.random-chat.site' >웹 사이트로 이동하기</a>
                     </div>
                 </div>
                 
