@@ -97,7 +97,7 @@ const Project = forwardRef((props, ref) => {
                         <p className='project-url-text'>Front-End GitHub 코드 : </p>
                         <a className='project-address' href='https://github.com/dlxodud123/randomchat_front' >GitHub Repository로 이동하기</a>
                         <p className='project-url-text'>웹 주소 : </p>
-                        <a className='project-address' href='http://www.random-chat.site' >웹 사이트로 이동하기</a>
+                        <a className='project-address' href='https://www.random-chat.site' >웹 사이트로 이동하기</a>
                     </div>
                 </div>
                 
