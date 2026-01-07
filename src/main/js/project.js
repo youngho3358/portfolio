@@ -1,7 +1,36 @@
-import { forwardRef } from 'react';
+import { forwardRef, useEffect, useState } from 'react';
 import './../css/project.css';
 
 const Project = forwardRef((props, ref) => {
+    /**
+     * Runcombi 이미지 fade out, fade in 처리 시작
+     */
+    const [runcombiImgIndex, setRuncombiImgIndex] = useState(0);
+    const [runcombiFade, setRuncombiFade] = useState(false);
+
+    const runcombiImgList = [
+        `${process.env.PUBLIC_URL}/img/project/project_runcombi1.png`,
+        `${process.env.PUBLIC_URL}/img/project/project_runcombi2.png`,
+        `${process.env.PUBLIC_URL}/img/project/project_runcombi3.png`,
+        `${process.env.PUBLIC_URL}/img/project/project_runcombi4.png`,
+        `${process.env.PUBLIC_URL}/img/project/project_runcombi5.png`
+    ];
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setRuncombiFade(true); // 페이드아웃 시작
+
+            setTimeout(() => {
+                setRuncombiImgIndex(prev => (prev + 1) % runcombiImgList.length);
+                setRuncombiFade(false); // 페이드인 시작
+            }, 300);
+        }, 3000); // 3초마다 이미지 전환
+        return () => clearInterval(interval);
+    }, []);
+    /**
+     * Runcombi 이미지 fade out, fade in 처리 종료
+     */
+
     return (
         <div ref={ref} className="project-container">
             <div className="project-header">
@@ -76,14 +105,13 @@ const Project = forwardRef((props, ref) => {
 
                 <div className="project-card">
                     <div className="project-card-img">
-                        <video className='project-video' src={`${process.env.PUBLIC_URL}/video/randomchat.mp4`} alt='muzinut' controls/>
-                        {/* <div className='project-video' style={{width:'694.87px', height:'230px', textAlign:'center', paddingTop:'220px', fontSize:'25px', fontWeight:'bold'}}> - 구현 중 -</div> */}
+                        <video className='project-video' src={`${process.env.PUBLIC_URL}/video/randomchat.mp4`} alt='randomchat' controls/>
                     </div>
                     <div className="project4-card-desc">
                         <p className='project-title' style={{fontSize:'30px', marginBottom:'0px'}}>Randomchat</p>
-                        <p className='project-period'>2024.11.15 ~ now</p>
+                        <p className='project-period'>2024.11.15 ~ 2024.12.31</p>
                         <p className='project-detail'>
-                            현재 구현중인 랜덤한 유저와 채팅할 수 있는 사이트입니다.<br/>
+                            랜덤한 유저와 화상 채팅을 할 수 있는 토이 프로젝트 입니다.<br/>
                             <br/>
                             Front-End는 React를 사용해 구현하였으며,<br/>
                             Back-End는 Spring Boot를 사용해 구현하였습니다.<br/>
@@ -100,8 +128,85 @@ const Project = forwardRef((props, ref) => {
                         <a className='project-address' href='https://www.random-chat.site' >웹 사이트로 이동하기</a>
                     </div>
                 </div>
-                
 
+                <div className="project-card">
+                    <div className="project-card-img">
+                        <img className='project-video' src={`${process.env.PUBLIC_URL}/img/project/project_shinhan.png`} alt='shinhan'/>
+                    </div>
+                    <div className="project5-card-desc">
+                        <p className='project-title' style={{fontSize:'30px', marginBottom:'0px'}}>신한은행 SOL Bank 챗봇 고도화</p>
+                        <p className='project-period'>2025.02 ~ 2025.04</p>
+                        <p className='project-detail'>
+                            신한은행 SOL Bank 앱 내 챗봇 고도화 프로젝트 입니다.<br/>
+                            <br/>
+                            구좌 로그인 보안 취약점 수정
+                            <p className='sub'>⇁ 기존 구현되어 있던 챗봇 내 구좌 로그인 보안 취약점을 랜덤한 UUID 와 DateTime 으로 조합하여 SHA256 으로 해시처리 후 비교하여 방지하였습니다.</p>
+                            
+                            <br/>
+                            챗봇 AI 추천 상품 고도화
+                            <p className='sub'>⇁ 기존 챗봇 AI 를 통해 제공하던 추천 상품을 고도화하여 고객별 추천 상품에 대한 접근 빈도 및 가입 현황을 데이터화 하였습니다.</p>
+                        </p>
+                    </div>
+                </div>
+                
+                <div className="project-card">
+                    <div className="project-card-img">
+                        <img className={`project-video fade-image${runcombiFade? ' hide' : ''}`} src={runcombiImgList[runcombiImgIndex]} alt='runcombi'/>
+                    </div>
+                    <div className="project6-card-desc">
+                        <p className='project-title' style={{fontSize:'30px', marginBottom:'0px'}}>Runcombi</p>
+                        <p className='project-period'>2025.06 ~ 2025.08</p>
+                        <p className='project-detail'>
+                            CMC 동아리 내에서 개발하고 현재까지 서비스 중인 어플리케이션 입니다.<br/>
+                            <br/>
+                            반려견과의 산책을 기록으로 남겨 확인할 수 있는 프로젝트 입니다.<br/>
+                            구체적인 산책 경로와 산책 내용을 기재하여 캘린더 형태로 확인할 수 있습니다.<br/>
+                            <br/>
+                            1인 서버 개발자로 참여하여 혼자 모든 서버를 개발한 프로젝트입니다.<br/>
+                        </p>
+                        <p className='project-url-text'>Back-End GitHub 코드 : </p>
+                        <a className='project-address' href='https://github.com/Central-MakeUs/RunCombi_Server' >GitHub Repository로 이동하기</a>
+                        <p className='project-url-text'>iOS 앱 다운로드 : </p>
+                        <a className='project-address' href='https://apps.apple.com/kr/app/%EB%9F%B0%EC%BD%A4%EB%B9%84-%EB%B0%98%EB%A0%A4%EA%B2%AC-%EC%82%B0%EC%B1%85-%EC%9A%B4%EB%8F%99-%EA%B8%B0%EB%A1%9D/id6747975586' >iOS 앱 다운로드</a>
+                        <p className='project-url-text'>Android 앱 다운로드 : </p>
+                        <a className='project-address' href='https://play.google.com/store/apps/details?id=com.combo.runcombi&pcampaignid=web_share' >Android 앱 다운로드</a>
+                    </div>
+                </div>
+
+                <div className="project-card">
+                    <div className="project-card-img">
+                        <video className='project-video' src={`${process.env.PUBLIC_URL}/video/korailtalk.mov`} alt='korailtalk' controls/>
+                    </div>
+                    <div className="project7-card-desc">
+                        <p className='project-title' style={{fontSize:'30px', marginBottom:'0px'}}>코레일톡 앱 리뉴얼</p>
+                        <p className='project-period'>2025.05 ~ 2026.01</p>
+                        <p className='project-detail'>
+                            새롭게 런칭되는 코레일톡 앱의 WebView 및 Bridge 개발을 진행하였습니다.<br/>
+                            <br/><br/>
+                            View 전환 및 데이터 처리 방식 변경
+                            <p className='sub'>⇁ AS-IS의 서버 사이드 JSP 기반 렌더링 구조를 클라이언트 사이드 View(JSP)로 새로 개발하였습니다.</p>
+                            <p className='sub'>⇁ 서버-클라이언트 간 데이터 전달 방식을 통합 API 통신 기반 아키텍처로 재설계하였습니다.</p>
+                            <br/>
+                            Native - Webview 브리지 인터페이스 개발
+                            <p className='sub'>⇁ Native와 Webview 간 양방향 데이터 전달과 동기화를 위해 JavaScript 기반 Bridge 함수 집합을 모듈화하였습니다.</p>
+                            <p className='sub'>⇁ 각 페이지별 요청과 콜백 함수를 통합 설계하여 비동기 통신 및 상태 동기화 문제를 효율적으로 해결하였습니다.</p>
+                        </p>
+                    </div>
+                </div>
+
+                <div className="project-card">
+                    <div className="project-card-img">
+                        {/* <video className='project-video' src={`${process.env.PUBLIC_URL}/video/korailtalk.mov`} alt='db저축은행' controls/> */}
+                        <div className='project-video' style={{width:'694.87px', height:'230px', textAlign:'center', paddingTop:'220px', fontSize:'25px', fontWeight:'bold'}}> - 프로젝트 진행중 -</div>
+                    </div>
+                    <div className="project8-card-desc">
+                        <p className='project-title' style={{fontSize:'30px', marginBottom:'0px'}}>DB저축은행 디지털채널 재구축</p>
+                        <p className='project-period'>2026.01 ~ 2026.08</p>
+                        <p className='project-detail'>
+
+                        </p>
+                    </div>
+                </div>
             </div>
         </div>
     );

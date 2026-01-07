@@ -17,9 +17,9 @@ const Aboutme = forwardRef((props, ref) => {
           <p className='introduce'>
             안녕하세요.<br/>
             새로운 것을 배우고 기록하는 것을 좋아하는<br/>
-            신입 개발자 전영호입니다.<br/>
+            꾸준히 성장하고 싶은 개발자 전영호입니다.<br/>
             <br/>
-            <a href='https://youngho3358.tistory.com/' className='blog'>블로그</a> 를 클릭하시면 제가 학습며 정리해둔<br/>
+            <a href='javascript:void(0)' onClick={ () => { window.open('https://youngho3358.tistory.com/', '_blank') } } className='blog'>블로그</a> 를 클릭하시면 제가 학습며 정리해둔<br/>
             포스트 내용을 확인하실 수 있습니다.<br/>
           </p>
         </div>
@@ -70,7 +70,7 @@ const Aboutme = forwardRef((props, ref) => {
           <div className="icon"><BsFillPencilFill size={50} /></div>
           <div> 
             <div className="label">학력</div>
-            <div className="value">&nbsp;수원대학교 - 행정학과(수료)</div>
+            <div className="value">&nbsp;수원대학교 - 행정학과</div>
           </div>
         </div>
       </div>

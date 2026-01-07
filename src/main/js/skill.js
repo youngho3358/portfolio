@@ -5,9 +5,10 @@ import styled from 'styled-components';
 
 const skills = [
     { skill: 'HTML5', level: 70 },
-    { skill: 'CSS3', level: 65 },
-    { skill: 'JavaScript', level: 55 },
+    { skill: 'CSS3', level: 60 },
+    { skill: 'JavaScript', level: 65 },
     { skill: 'React', level: 50 },
+    { skill: 'Vue.js', level: 60 },
     { skill: 'JAVA', level: 75 },
     { skill: 'Spring', level: 70 },
     { skill: 'node.js', level: 60 },
@@ -57,6 +58,7 @@ const skills = [
                 <div className="skill_img"><img src={`${process.env.PUBLIC_URL}/img/frontend/skillimg_css.png`} alt='css' /></div>
                 <div className="skill_img"><img src={`${process.env.PUBLIC_URL}/img/frontend/skillimg_javascript.png`} alt='javascript' /></div>
                 <div className="skill_img"><img src={`${process.env.PUBLIC_URL}/img/frontend/skillimg_react.png`} alt='react' /></div>
+                <div className="skill_img"><img src={`${process.env.PUBLIC_URL}/img/frontend/skillimg_vue.png`} alt='Vue.js' /></div>
               </div>
             </div>
           </div>
