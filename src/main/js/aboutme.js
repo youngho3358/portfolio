@@ -19,7 +19,7 @@ const Aboutme = forwardRef((props, ref) => {
             새로운 것을 배우고 기록하는 것을 좋아하는<br/>
             꾸준히 성장하고 싶은 개발자 전영호입니다.<br/>
             <br/>
-            <a href='javascript:void(0)' onClick={ () => { window.open('https://youngho3358.tistory.com/', '_blank') } } className='blog'>블로그</a> 를 클릭하시면 제가 학습며 정리해둔<br/>
+            <a href='https://youngho3358.tistory.com/' target='_blank' rel='noopener noreferrer' className='blog'>블로그</a> 를 클릭하시면 제가 학습며 정리해둔<br/>
             포스트 내용을 확인하실 수 있습니다.<br/>
           </p>
         </div>

@@ -1,55 +1,9 @@
 import './../css/header.css';
 import React, { useEffect, useState } from 'react';
-import styled from 'styled-components';
 
-const HeaderContainer = styled.div`
-  width: 100%;
-  background-color: #333;
-`;
-
-const HeaderWrapper = styled.div`
-  display: flex;
-  justify-content: space-between;
-  padding: 10px 20px;
-  color: white;
-
-  @media (max-width: 768px) {
-    flex-direction: column;
-    align-items: center;
-  }
-`;
-
-const HeaderTitle = styled.p`
-  font-size: 24px;
-`;
-
-const Nav = styled.div`
-  display: flex;
-
-  @media (max-width: 768px) {
-    flex-direction: column;
-    align-items: center;
-  }
-`;
-
-const NavItem = styled.p`
-  margin: 0 10px;
-  cursor: pointer;
-
-  &:hover {
-    color: #ddd;
-  }
-
-  @media (max-width: 768px) {
-    margin: 5px 0;
-  }
-`;
-
-
-const Header = ({onAboutMeClick, onSkillsClick, onArchivingClick, onProjectClick, onActivitiesClick}) => {
-  
-  
+const Header = ({ isMobile, onAboutMeClick, onSkillsClick, onArchivingClick, onProjectClick, onActivitiesClick }) => {
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -57,51 +11,89 @@ const Header = ({onAboutMeClick, onSkillsClick, onArchivingClick, onProjectClick
     };
 
     window.addEventListener('scroll', handleScroll);
+    handleScroll();
 
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
-  }, [isScrolled]);
+  }, []);
+
+  useEffect(() => {
+    if (!isMobile) {
+      setIsMenuOpen(false);
+    }
+  }, [isMobile]);
+
+  const navItems = [
+    { label: 'About Me', onClick: onAboutMeClick },
+    { label: 'Skills', onClick: onSkillsClick },
+    { label: 'Archiving', onClick: onArchivingClick },
+    { label: 'Projects', onClick: onProjectClick },
+    { label: 'Activities', onClick: onActivitiesClick },
+  ];
+
+  const headerContainerClass = isScrolled ? 'header_container2' : 'header_container';
+  const headerClass = isScrolled ? 'header2' : 'header';
+  const headerTitleClass = isScrolled ? 'header_title2' : 'header_title';
+  const navItemClass = isScrolled ? 'nav_item2' : 'nav_item';
+
+  const handleNavClick = (handler) => {
+    handler();
+    if (isMobile) {
+      setIsMenuOpen(false);
+    }
+  };
+
+  if (isMobile) {
+    return (
+      <div className={headerContainerClass}>
+        <div className={`${headerClass} mobile-header`}>
+          <div className="mobile-header-row">
+            <p className={headerTitleClass}>JYH&apos;s Portfolio</p>
+            <button
+              type="button"
+              className={`mobile-menu-btn ${isMenuOpen ? 'open' : ''}`}
+              onClick={() => setIsMenuOpen((prev) => !prev)}
+              aria-label="Toggle navigation menu"
+              aria-expanded={isMenuOpen}
+            >
+              <span />
+              <span />
+              <span />
+            </button>
+          </div>
+          {isMenuOpen && (
+            <div className="mobile-nav">
+              {navItems.map((item) => (
+                <p
+                  key={item.label}
+                  className={`${navItemClass} mobile-nav-item`}
+                  onClick={() => handleNavClick(item.onClick)}
+                >
+                  {item.label}
+                </p>
+              ))}
+            </div>
+          )}
+        </div>
+      </div>
+    );
+  }
 
   return (
-    <>
-      {
-        isScrolled ? (
-          <>  
-            <HeaderContainer>
-              <div className="header_container2">
-                <div className="header2">
-                  <p className="header_title2">JYH's Portfolio</p>
-                  <div className="nav">
-                    <p className="nav_item2" onClick={onAboutMeClick}>About Me</p>
-                    <p className="nav_item2" onClick={onSkillsClick}>Skills</p>
-                    <p className="nav_item2" onClick={onArchivingClick}>Archiving</p>
-                    <p className="nav_item2" onClick={onProjectClick}>Projects</p>
-                    <p className="nav_item2" onClick={onActivitiesClick}>Activities</p>
-                  </div>
-                </div>
-              </div>
-            </HeaderContainer>
-          </>
-        ) : (
-          <>
-            <div className="header_container">
-              <div className="header">
-                <p className="header_title">JYH's Portfolio</p>
-                <div className="nav">
-                  <p className="nav_item" onClick={onAboutMeClick}>About Me</p>
-                  <p className="nav_item" onClick={onSkillsClick}>Skills</p>
-                  <p className="nav_item" onClick={onArchivingClick}>Archiving</p>
-                  <p className="nav_item" onClick={onProjectClick}>Projects</p>
-                  <p className="nav_item" onClick={onActivitiesClick}>Activities</p>
-                </div>
-              </div>
-            </div>
-          </>
-        )
-      }
-    </>
+    <div className={headerContainerClass}>
+      <div className={headerClass}>
+        <p className={headerTitleClass}>JYH&apos;s Portfolio</p>
+        <div className="nav">
+          {navItems.map((item) => (
+            <p key={item.label} className={navItemClass} onClick={() => item.onClick()}>
+              {item.label}
+            </p>
+          ))}
+        </div>
+      </div>
+    </div>
   );
-}
+};
 
 export default Header;

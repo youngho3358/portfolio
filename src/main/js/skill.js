@@ -1,7 +1,6 @@
 import { forwardRef, useEffect, useRef, useState } from 'react';
 import './../css/skill.css';
 import SkillBar from './skillbar';
-import styled from 'styled-components';
 
 const skills = [
     { skill: 'HTML5', level: 70 },
@@ -20,33 +19,34 @@ const skills = [
   
   const Skill = forwardRef((props, ref) => {
     const [isInView, setIsInView] = useState(false);
-    const skillRef = useRef(null);
+    const skillChartRef = useRef(null);
   
     useEffect(() => {
+      const currentTarget = skillChartRef.current;
+      if (!currentTarget) {
+        return;
+      }
+
       const observer = new IntersectionObserver(
         ([entry]) => {
           if (entry.isIntersecting) {
             setIsInView(true);
-            observer.unobserve(skillRef.current); // 애니메이션 후 감시 중지
+            observer.unobserve(entry.target); // 애니메이션 후 감시 중지
           }
         },
-        { threshold: 0.1 } // 요소의 10%가 보이면 트리거
+        { threshold: 0.3 } // skill-chart 영역이 일정 이상 보이면 트리거
       );
   
-      if (skillRef.current) {
-        observer.observe(skillRef.current);
-      }
+      observer.observe(currentTarget);
   
       return () => {
-        if (skillRef.current) {
-          observer.unobserve(skillRef.current);
-        }
+        observer.unobserve(currentTarget);
       };
     }, []);
   
     return (
       <div ref={ref} className="skill-container">
-        <div ref={skillRef} className="skill-header">
+        <div className="skill-header">
           <div>SKILLS</div>
         </div>
         <div className="skill-content">
@@ -84,7 +84,7 @@ const skills = [
             </div>
           </div>
         </div>
-        <div className="skill-chart">
+        <div ref={skillChartRef} className="skill-chart">
           {skills.map((skillObj, index) => (
             <SkillBar key={index} skill={skillObj.skill} level={skillObj.level} isInView={isInView} />
           ))}

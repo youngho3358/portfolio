@@ -1,8 +1,11 @@
-import { Navigate, useNavigate } from 'react-router-dom';
 import './../css/activities.css';
 import { forwardRef } from 'react';
 
 const Activities = forwardRef((props, ref) => {
+    const handleInnerLinkClick = (event) => {
+        event.stopPropagation();
+    };
+
     return (
         <div ref={ref} className="activities-container">
             <div className="activities-header">
@@ -43,10 +46,18 @@ const Activities = forwardRef((props, ref) => {
                     <div className="activities-description">
                         인프런 강의 수료<br/>
                         <ul className='activities-list'>
-                            <a href='javascript:void(0)' onClick={ () => { window.open('https://www.inflearn.com/course/ORM-JPA-Basic', '_blank')} }><li>자바 ORM 표준 JPA 프로그래밍 - 기본편 (김영한) 수료</li></a>
-                            <a href='javascript:void(0)' onClick={ () => { window.open('https://www.inflearn.com/course/%EC%8A%A4%ED%94%84%EB%A7%81%EB%B6%80%ED%8A%B8-JPA-%ED%99%9C%EC%9A%A9-1', '_blank')} }><li>실전! 스프링 부트와 JPA 활용1 - 웹 애플리케이션 개발 (김영한) 수료</li></a>
-                            <a href='javascript:void(0)' onClick={ () => { window.open('https://www.inflearn.com/course/%EC%8A%A4%ED%94%84%EB%A7%81-%EB%8D%B0%EC%9D%B4%ED%84%B0-JPA-%EC%8B%A4%EC%A0%84', '_blank')} }><li>실전! 스프링 데이터 JPA (김영한) 수료</li></a>
-                            <a href='javascript:void(0)' onClick={ () => { window.open('https://www.inflearn.com/course/querydsl-%EC%8B%A4%EC%A0%84', '_blank')} }><li>실전! Querydsl (김영한) 수료</li></a>
+                            <li>
+                                <a href='https://www.inflearn.com/course/ORM-JPA-Basic' target='_blank' rel='noopener noreferrer' onClick={handleInnerLinkClick}>자바 ORM 표준 JPA 프로그래밍 - 기본편 (김영한) 수료</a>
+                            </li>
+                            <li>
+                                <a href='https://www.inflearn.com/course/%EC%8A%A4%ED%94%84%EB%A7%81%EB%B6%80%ED%8A%B8-JPA-%ED%99%9C%EC%9A%A9-1' target='_blank' rel='noopener noreferrer' onClick={handleInnerLinkClick}>실전! 스프링 부트와 JPA 활용1 - 웹 애플리케이션 개발 (김영한) 수료</a>
+                            </li>
+                            <li>
+                                <a href='https://www.inflearn.com/course/%EC%8A%A4%ED%94%84%EB%A7%81-%EB%8D%B0%EC%9D%B4%ED%84%B0-JPA-%EC%8B%A4%EC%A0%84' target='_blank' rel='noopener noreferrer' onClick={handleInnerLinkClick}>실전! 스프링 데이터 JPA (김영한) 수료</a>
+                            </li>
+                            <li>
+                                <a href='https://www.inflearn.com/course/querydsl-%EC%8B%A4%EC%A0%84' target='_blank' rel='noopener noreferrer' onClick={handleInnerLinkClick}>실전! Querydsl (김영한) 수료</a>
+                            </li>
                         </ul>
                     </div>
                 </div>
@@ -58,8 +69,12 @@ const Activities = forwardRef((props, ref) => {
                         수익형 앱런칭 동아리 CMC 17기 Server Challenger 수료<br />
                         <label>2025.05.10 ~ 2025.08.30</label>
                         <ul className='activities-list'>
-                            <li>너디너리 해커톤 8th 수료 - <a href='javascript:void(0)' onClick={ () => { window.open('https://drive.google.com/file/d/1yiWYWHhoATEy4p-PnrXT9xCvX1FJCdCm/view?usp=drive_link', '_blank') } }>증명서 보기</a></li>
-                            <li>Runcombi 앱 런칭 - <a href='javascript:void(0)' onClick={ () => { window.open('https://github.com/Central-MakeUs/RunCombi_Server', '_blank') } }>Repository 보기</a></li>
+                            <li>
+                                너디너리 해커톤 8th 수료 - <a href='https://drive.google.com/file/d/1yiWYWHhoATEy4p-PnrXT9xCvX1FJCdCm/view?usp=drive_link' target='_blank' rel='noopener noreferrer' onClick={handleInnerLinkClick}>증명서 보기</a>
+                            </li>
+                            <li>
+                                Runcombi 앱 런칭 - <a href='https://github.com/Central-MakeUs/RunCombi_Server' target='_blank' rel='noopener noreferrer' onClick={handleInnerLinkClick}>Repository 보기</a>
+                            </li>
                         </ul>
                     </div>
                 </div>
@@ -71,7 +86,9 @@ const Activities = forwardRef((props, ref) => {
                         수익형 앱런칭 동아리 CMC 18기 Server Lead 활동<br />
                         <label>2025.10.01 ~ 2026.03.14</label>
                         <ul className='activities-list'>
-                            <li><a href='javascript:void(0)' onClick={ () => { window.open('https://www.instagram.com/p/DP8kuAZkkmy/?img_index=1&igsh=enpiamIwbmZ1aGF5', '_blank') } }>17기 회고 및 18기 Lead 각오 Instagram 게시물 보기</a></li>
+                            <li>
+                                <a href='https://www.instagram.com/p/DP8kuAZkkmy/?img_index=1&igsh=enpiamIwbmZ1aGF5' target='_blank' rel='noopener noreferrer' onClick={handleInnerLinkClick}>17기 회고 및 18기 Lead 각오 Instagram 게시물 보기</a>
+                            </li>
                         </ul>
                     </div>
                 </div>

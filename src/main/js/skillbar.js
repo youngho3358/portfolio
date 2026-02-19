@@ -5,27 +5,33 @@ const SkillBar = ({ skill, level, isInView }) => {
   const [displayLevel, setDisplayLevel] = useState(0);
 
   useEffect(() => {
-    let timeout;
-    if (isInView) {
-      timeout = setTimeout(() => {
-        if (displayLevel < level) {
-          const animationInterval = setInterval(() => {
-            setDisplayLevel(prev => {
-              if (prev < level) {
-                return prev + 1;
-              } else {
-                clearInterval(animationInterval);
-                return prev;
-              }
-            });
-          }, 10);
-        }
-      }, 900); 
+    if (!isInView) {
+      return;
     }
+
+    let currentLevel = 0;
+    let animationInterval;
+    setDisplayLevel(0);
+
+    const startDelay = setTimeout(() => {
+      animationInterval = setInterval(() => {
+        currentLevel += 1;
+        if (currentLevel >= level) {
+          setDisplayLevel(level);
+          clearInterval(animationInterval);
+          return;
+        }
+        setDisplayLevel(currentLevel);
+      }, 10);
+    }, 250);
+
     return () => {
-      clearTimeout(timeout);
+      clearTimeout(startDelay);
+      if (animationInterval) {
+        clearInterval(animationInterval);
+      }
     };
-  }, [isInView, displayLevel, level]);
+  }, [isInView, level]);
 
   return (
     <div className="skill-bar">
