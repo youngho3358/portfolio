@@ -26,69 +26,41 @@
 
 .project-card {
     background-color: #ffffff;
-    min-width: 1230px;
-    height: 550px;
+    width: 1230px;
+    min-height: 550px;
     box-shadow: 1rem 1rem 1rem 1rem rgb(68 68 68 / 20%);
     border-radius: 30px;
     margin-top: 50px;
     padding: 20px;
     display: flex;
+    align-items: center;
 }
 
-.project1-card-desc {
+.project-card-desc {
+    flex: 1 1 auto;
+    min-width: 0;
     margin-left: 80px;
-    margin-top: 50px;
     text-align: left;
 }
 
-.project2-card-desc {
-    margin-left: 80px;
-    margin-top: 30px;
-    text-align: left;
-}
-
-.project3-card-desc {
-    margin-left: 80px;
-    margin-top: 90px;
-    text-align: left;
-}
-
-.project4-card-desc {
-    margin-left: 80px;
-    margin-top: 0px;
-    text-align: left;
-}
-
-.project5-card-desc {
-    margin-left: 80px;
-    margin-top: 80px;
-    text-align: left;
-}
-
-.project6-card-desc {
-    margin-left: 80px;
-    margin-top: 10px;
-    text-align: left;
-}
-
-.project7-card-desc {
-    margin-left: 80px;
-    margin-top: 50px;
-    text-align: left;
-}
-
-.project8-card-desc {
-    margin-left: 80px;
-    margin-top: 180px;
-    text-align: left;
+.project-card-img {
+    width: 650px;
+    height: 450px;
+    margin-left: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
 }
 
 .project-video {
     border: 1px solid gray;
     border-radius: 5px;
-    margin-top: 50px;
-    margin-left: 40px;
-    height: 450px;
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    display: block;
 }
 
 .project-title {
@@ -106,12 +78,16 @@
     margin: 40px 0px;
     font-size: 18px;
     font-weight: bold;
+    word-break: keep-all;
+    overflow-wrap: break-word;
 }
 
 .project-detail > .sub {
     margin-left: 50px;
     font-size: 14px;
     font-weight: bold;
+    word-break: keep-all;
+    overflow-wrap: break-word;
 }
 
 .project-url-text {
@@ -147,10 +123,11 @@
         height: auto;
     }
 
-    /* .project-card-img img {
+    .project-card-img {
         width: 450px;
         height: 300px;
-    } */
+        margin-left: 20px;
+    }
 
     .project-card-desc {
         font-size: 22px;
@@ -172,10 +149,11 @@
         height: auto;
     }
 
-    /* .project-card-img img {
+    .project-card-img {
         width: 350px;
         height: 250px;
-    } */
+        margin-left: 10px;
+    }
 
     .project-card-desc {
         font-size: 20px;
@@ -199,11 +177,11 @@
         align-items: center;
     }
 
-    /* .project-card-img img {
+    .project-card-img {
         width: 300px;
         height: 200px;
-        margin: 0;
-    } */
+        margin: 0 auto;
+    }
 
     .project-card-desc {
         font-size: 18px;

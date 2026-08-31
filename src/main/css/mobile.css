@@ -368,31 +368,25 @@
 }
 
 .mobile-layout .project-video {
-  width: 100% !important;
+  width: auto !important;
   height: auto !important;
+  max-width: 100% !important;
+  max-height: 380px !important;
   margin: 0 !important;
   padding-top: 0 !important;
 }
 
 .mobile-layout .project-card-img {
+  width: 100%;
+  height: auto;
+  margin-left: 0;
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
-.mobile-layout .project-video.project-mobile-fit {
-  width: min(100%, 240px) !important;
-  max-width: 240px;
-  margin: 0 auto !important;
-}
 
-.mobile-layout .project1-card-desc,
-.mobile-layout .project2-card-desc,
-.mobile-layout .project3-card-desc,
-.mobile-layout .project4-card-desc,
-.mobile-layout .project5-card-desc,
-.mobile-layout .project6-card-desc,
-.mobile-layout .project7-card-desc,
-.mobile-layout .project8-card-desc {
+.mobile-layout .project-card-desc {
   margin: 14px 0 0 0;
 }
 
