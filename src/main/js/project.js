@@ -38,11 +38,12 @@ const Project = forwardRef((props, ref) => {
             </div>
             <div className="project-content">
 
-                <div className="project-card">
+                {/* coin_investment */}
+                {/* <div className="project-card">
                     <div className="project-card-img">
                         <video className='project-video' src={`${process.env.PUBLIC_URL}/video/coin_investment.mp4`} alt='coin_investment' controls/>
                     </div>
-                    <div className="project1-card-desc">
+                    <div className="project-card-desc">
                         <p className='project-title'>COIN_INVESTMENT</p>
                         <p className='project-period'>2024.04.11 ~ 2024.04.26</p>
                         <div className='project-detail'>
@@ -58,13 +59,14 @@ const Project = forwardRef((props, ref) => {
                         <p className='project-url-text'>자세한 포트폴리오 내용</p>
                         <a className='project-address' href='https://drive.google.com/file/d/1_Z2nB5tADp9p8tJvUBekwA84BjOWh_D4/view?usp=drive_link' >포트폴리오로 보러가기</a>
                     </div>
-                </div>
+                </div> */}
 
-                <div className="project-card">
+                {/* Muzinut */}
+                {/* <div className="project-card">
                     <div className="project-card-img">
                         <video className='project-video' src={`${process.env.PUBLIC_URL}/video/muzinut.mp4`} alt='muzinut' controls/>
                     </div>
-                    <div className="project2-card-desc">
+                    <div className="project-card-desc">
                         <p className='project-title'>Muzinut</p>
                         <p className='project-period'>2024.06.02 ~ 2024.08.02</p>
                         <div className='project-detail'>
@@ -82,13 +84,14 @@ const Project = forwardRef((props, ref) => {
                         <p className='project-url-text'>자세한 포트폴리오 내용</p>
                         <a className='project-address' href='https://drive.google.com/file/d/1SEajSp0PqzpSqfz39PhYArISyhvCuyoI/view?usp=drive_link' >포트폴리오로 보러가기</a>
                     </div>
-                </div>
+                </div> */}
 
+                {/* 포트폴리오 */}
                 <div className="project-card">
                     <div className="project-card-img">
                         <video className='project-video' src={`${process.env.PUBLIC_URL}/video/portfolio.mp4`} alt='portfolio' controls/>
                     </div>
-                    <div className="project3-card-desc">
+                    <div className="project-card-desc">
                         <p className='project-title'>Portfolio</p>
                         <p className='project-period'>2024.08.15 ~ 2024.08.30</p>
                         <div className='project-detail'>
@@ -99,15 +102,16 @@ const Project = forwardRef((props, ref) => {
                             Github Page 에 업로드하여 배포하였습니다.<br/>
                         </div>
                         <p className='project-url-text'>GitHub 코드 : </p>
-                        <a className='project-address' href='https://github.com/youngho3358/portfolio' >GitHub Repository로 이동하기</a>
+                        <a className='project-address' target="_blank" rel="noreferrer" href='https://github.com/youngho3358/portfolio' >GitHub Repository로 이동하기</a>
                     </div>
                 </div>
 
-                <div className="project-card">
+                {/* 랜덤채팅 */}
+                {/* <div className="project-card">
                     <div className="project-card-img">
                         <video className='project-video' src={`${process.env.PUBLIC_URL}/video/randomchat.mp4`} alt='randomchat' controls/>
                     </div>
-                    <div className="project4-card-desc">
+                    <div className="project-card-desc">
                         <p className='project-title' style={{fontSize:'30px', marginBottom:'0px'}}>Randomchat</p>
                         <p className='project-period'>2024.11.15 ~ 2024.12.31</p>
                         <div className='project-detail'>
@@ -121,11 +125,11 @@ const Project = forwardRef((props, ref) => {
                             백엔드, 프론트엔드 경로를 분리하여 구현하였습니다.
                         </div>
                         <p className='project-url-text'>Back-End GitHub 코드 : </p>
-                        <a className='project-address' href='https://github.com/youngho3358/RandomChat-be' >GitHub Repository로 이동하기</a>
+                        <a className='project-address' target="_blank" rel="noreferrer" href='https://github.com/youngho3358/RandomChat-be' >GitHub Repository로 이동하기</a>
                         <p className='project-url-text'>Front-End GitHub 코드 : </p>
-                        <a className='project-address' href='https://github.com/dlxodud123/randomchat_front' >GitHub Repository로 이동하기</a>
+                        <a className='project-address' target="_blank" rel="noreferrer" href='https://github.com/dlxodud123/randomchat_front' >GitHub Repository로 이동하기</a>
                         <p className='project-url-text'>웹 주소 : </p>
-                        <a className='project-address' href='https://www.random-chat.site' >웹 사이트로 이동하기</a>
+                        <a className='project-address' target="_blank" rel="noreferrer" href='https://www.random-chat.site' >웹 사이트로 이동하기</a>
                     </div>
                 </div>
 
@@ -133,7 +137,7 @@ const Project = forwardRef((props, ref) => {
                     <div className="project-card-img">
                         <img className='project-video project-mobile-fit' src={`${process.env.PUBLIC_URL}/img/project/project_shinhan.png`} alt='shinhan'/>
                     </div>
-                    <div className="project5-card-desc">
+                    <div className="project-card-desc">
                         <p className='project-title' style={{fontSize:'30px', marginBottom:'0px'}}>신한은행 SOL Bank 챗봇 고도화</p>
                         <p className='project-period'>2025.02 ~ 2025.04</p>
                         <div className='project-detail'>
@@ -147,13 +151,14 @@ const Project = forwardRef((props, ref) => {
                             <p className='sub'>⇁ 기존 챗봇 AI 를 통해 제공하던 추천 상품을 고도화하여 고객별 추천 상품에 대한 접근 빈도 및 가입 현황을 데이터화 하였습니다.</p>
                         </div>
                     </div>
-                </div>
+                </div> */}
                 
+                {/* 런콤비 */}
                 <div className="project-card">
                     <div className="project-card-img">
                         <img className={`project-video project-mobile-fit fade-image${runcombiFade? ' hide' : ''}`} src={RUNCOMBI_IMG_LIST[runcombiImgIndex]} alt='runcombi'/>
                     </div>
-                    <div className="project6-card-desc">
+                    <div className="project-card-desc">
                         <p className='project-title' style={{fontSize:'30px', marginBottom:'0px'}}>Runcombi</p>
                         <p className='project-period'>2025.06 ~ 2025.08</p>
                         <div className='project-detail'>
@@ -165,19 +170,20 @@ const Project = forwardRef((props, ref) => {
                             1인 서버 개발자로 참여하여 혼자 모든 서버를 개발한 프로젝트입니다.<br/>
                         </div>
                         <p className='project-url-text'>Back-End GitHub 코드 : </p>
-                        <a className='project-address' href='https://github.com/Central-MakeUs/RunCombi_Server' >GitHub Repository로 이동하기</a>
+                        <a className='project-address' target="_blank" rel="noreferrer" href='https://github.com/Central-MakeUs/RunCombi_Server' >GitHub Repository로 이동하기</a>
                         <p className='project-url-text'>iOS 앱 다운로드 : </p>
-                        <a className='project-address' href='https://apps.apple.com/kr/app/%EB%9F%B0%EC%BD%A4%EB%B9%84-%EB%B0%98%EB%A0%A4%EA%B2%AC-%EC%82%B0%EC%B1%85-%EC%9A%B4%EB%8F%99-%EA%B8%B0%EB%A1%9D/id6747975586' >iOS 앱 다운로드</a>
+                        <a className='project-address' target="_blank" rel="noreferrer" href='https://apps.apple.com/kr/app/%EB%9F%B0%EC%BD%A4%EB%B9%84-%EB%B0%98%EB%A0%A4%EA%B2%AC-%EC%82%B0%EC%B1%85-%EC%9A%B4%EB%8F%99-%EA%B8%B0%EB%A1%9D/id6747975586' >iOS 앱 다운로드</a>
                         <p className='project-url-text'>Android 앱 다운로드 : </p>
-                        <a className='project-address' href='https://play.google.com/store/apps/details?id=com.combo.runcombi&pcampaignid=web_share' >Android 앱 다운로드</a>
+                        <a className='project-address' target="_blank" rel="noreferrer" href='https://play.google.com/store/apps/details?id=com.combo.runcombi&pcampaignid=web_share' >Android 앱 다운로드</a>
                     </div>
                 </div>
 
+                {/* 코레일톡 */}
                 <div className="project-card">
                     <div className="project-card-img">
                         <video className='project-video project-mobile-fit' src={`${process.env.PUBLIC_URL}/video/korailtalk.mov`} alt='korailtalk' controls/>
                     </div>
-                    <div className="project7-card-desc">
+                    <div className="project-card-desc">
                         <p className='project-title' style={{fontSize:'30px', marginBottom:'0px'}}>코레일톡 앱 리뉴얼</p>
                         <p className='project-period'>2025.05 ~ 2026.01</p>
                         <div className='project-detail'>
@@ -194,14 +200,46 @@ const Project = forwardRef((props, ref) => {
                     </div>
                 </div>
 
+                {/* DB저축은행 디지털 채널 재구축 */}
                 <div className="project-card">
                     <div className="project-card-img">
-                        {/* <video className='project-video' src={`${process.env.PUBLIC_URL}/video/korailtalk.mov`} alt='db저축은행' controls/> */}
-                        <div className='project-video' style={{width:'694.87px', height:'230px', textAlign:'center', paddingTop:'220px', fontSize:'25px', fontWeight:'bold'}}> - 프로젝트 진행중 -</div>
+                        <video className='project-video' src={`${process.env.PUBLIC_URL}/video/dbbank.mp4`} alt='db저축은행' controls/>
+                        {/* <div className='project-video' style={{width:'694.87px', height:'230px', textAlign:'center', paddingTop:'220px', fontSize:'25px', fontWeight:'bold'}}> - 프로젝트 진행중 -</div> */}
                     </div>
-                    <div className="project8-card-desc">
+                    <div className="project-card-desc">
                         <p className='project-title' style={{fontSize:'30px', marginBottom:'0px'}}>DB저축은행 디지털채널 재구축</p>
                         <p className='project-period'>2026.01 ~ 2026.08</p>
+                        <div className='project-detail'>
+                            새롭게 런칭되는 DB저축은행 앱의 Server 와 Front 개발을 진행하였습니다.<br/>
+                            <br/><br/>
+                            외부 솔루션(UbiReport)과 은행 WAS 간 연동 작업
+                            <p className='sub'>⇁ 리포트 솔루션과 인터넷뱅킹, 모바일뱅킹 WAS 간 연동 작업을 진행하였습니다.</p>
+                            <p className='sub'>⇁ 변경된 리포트 솔루션에 맞춰 마이그레이션 작업을 진행하였습니다.</p>
+                            <br/>
+
+                            긴급점검 제어 기능 작업
+                            <p className='sub'>⇁ 인터넷뱅킹, 모바일뱅킹(앱), 모바일뱅킹(웹) 별 긴급점검 제어 기능을 분리하여 개발하였습니다.</p>
+                            <p className='sub'>⇁ 긴급점검시 Interceptor 와 Server Session 을 활용하여 관리자는 우회 접속 및 테스트가 가능한 환경을 구성하였습니다.</p>
+                            <br/>
+
+                            이외의 약 30가지 서비스 및 화면 개발
+                            <br/>
+
+                            <p className='project-url-text'>자세한 개발내용 Notion : </p>
+                            <a className='project-address' target="_blank" rel="noreferrer" href='https://app.notion.com/p/DB-3c6105feb9a2800b8fedf4b9bc08eccf?source=copy_link' >자세한 개발 내용 확인하기</a>
+                        </div>
+                    </div>
+                </div>
+
+                {/* KB국민은행 코어뱅킹 현대화(비대면) */}
+                <div className="project-card">
+                    <div className="project-card-img">
+                        {/* <video className='project-video' src={`${process.env.PUBLIC_URL}/video/dbbank.mp4`} alt='KB국민은행 코어뱅킹 현대화(비대면)' controls/> */}
+                        <div className='project-video' style={{width:'694.87px', height:'230px', textAlign:'center', paddingTop:'220px', fontSize:'25px', fontWeight:'bold'}}> - 프로젝트 진행중 -</div>
+                    </div>
+                    <div className="project-card-desc">
+                        <p className='project-title' style={{fontSize:'30px', marginBottom:'0px'}}>KB국민은행 코어뱅킹 현대화(비대면)</p>
+                        <p className='project-period'>2026.09 ~ 2028.01</p>
                         <div className='project-detail'>
 
                         </div>

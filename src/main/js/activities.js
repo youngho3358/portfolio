@@ -83,13 +83,27 @@ const Activities = forwardRef((props, ref) => {
                         <img src={`${process.env.PUBLIC_URL}/img/activities/CMC_18th.png`} alt='CMC' />
                     </div>
                     <div className="activities-description">
-                        수익형 앱런칭 동아리 CMC 18기 Server Lead 활동<br />
-                        <label>2025.10.01 ~ 2026.03.14</label>
+                        수익형 앱런칭 동아리 CMC 18기, 19기 Server Lead 활동<br />
+                        <label>2025.10.01 ~ 2026.08.29</label>
                         <ul className='activities-list'>
                             <li>
                                 <a href='https://www.instagram.com/p/DP8kuAZkkmy/?img_index=1&igsh=enpiamIwbmZ1aGF5' target='_blank' rel='noopener noreferrer' onClick={handleInnerLinkClick}>17기 회고 및 18기 Lead 각오 Instagram 게시물 보기</a>
                             </li>
                         </ul>
+                    </div>
+                </div>
+                <div className="activities-card" onClick={() => { window.open('https://cmc.makeus.in/', '_blank') }}>
+                    <div className="activities-img">
+                        <img src={`${process.env.PUBLIC_URL}/img/activities/CMC_18th.png`} alt='CMC' />
+                    </div>
+                    <div className="activities-description">
+                        수익형 앱런칭 동아리 CMC 20기 총괄 Head Lead 활동<br />
+                        <label>2025.11.14 ~ 2027.03.</label>
+                        {/* <ul className='activities-list'>
+                            <li>
+                                <a href='https://www.instagram.com/p/DP8kuAZkkmy/?img_index=1&igsh=enpiamIwbmZ1aGF5' target='_blank' rel='noopener noreferrer' onClick={handleInnerLinkClick}>17기 회고 및 18기 Lead 각오 Instagram 게시물 보기</a>
+                            </li>
+                        </ul> */}
                     </div>
                 </div>
             </div>

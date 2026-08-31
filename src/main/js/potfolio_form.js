@@ -55,9 +55,9 @@ const Potfolio_form = () => {
       <Top />
       <Aboutme ref={aboutMeRef} />
       <Skill ref={skillsRef} />
-      <Archiving ref={archivingRef} />    
-      <Project ref={projectRef} />  
+      <Project ref={projectRef} />
       <Activities ref={activitiesRef} />
+      <Archiving ref={archivingRef} />
       <End />
       <button onClick={handleScrollToTop} className="scroll-to-top"><FaArrowUp size={40} /></button>
     </div>
