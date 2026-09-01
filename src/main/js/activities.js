@@ -87,7 +87,7 @@ const Activities = forwardRef((props, ref) => {
                         </ul>
                     </div>
                 </div>
-                <div className="activities-card" onClick={() => { window.open('https://cmc.makeus.in/', '_blank') }}>
+                <div className="activities-card" onClick={() => { window.open('https://cmc.neordinary.com/', '_blank') }}>
                     <div className="activities-img">
                         <img src={`${process.env.PUBLIC_URL}/img/activities/CMC_17th.png`} alt='CMC' />
                     </div>
@@ -104,7 +104,7 @@ const Activities = forwardRef((props, ref) => {
                         </ul>
                     </div>
                 </div>
-                <div className="activities-card" onClick={() => { window.open('https://cmc.makeus.in/', '_blank') }}>
+                <div className="activities-card" onClick={() => { window.open('https://cmc.neordinary.com/', '_blank') }}>
                     <div className="activities-img">
                         <img className={`project-video project-mobile-fit fade-image${cmcImgFade? ' hide' : ''}`} src={CMC_IMG_LIST[cmcImgIndex]} alt='runcombi'/>
                     </div>
@@ -118,18 +118,13 @@ const Activities = forwardRef((props, ref) => {
                         </ul>
                     </div>
                 </div>
-                <div className="activities-card" onClick={() => { window.open('https://cmc.makeus.in/', '_blank') }}>
+                <div className="activities-card" onClick={() => { window.open('https://cmc.neordinary.com/', '_blank') }}>
                     <div className="activities-img">
                         <img src={`${process.env.PUBLIC_URL}/img/activities/CMC_18th.png`} alt='CMC' />
                     </div>
                     <div className="activities-description">
                         수익형 앱런칭 동아리 CMC 20기 총괄 Head Lead 활동<br />
-                        <label>2025.11.14 ~ 2027.03.</label>
-                        {/* <ul className='activities-list'>
-                            <li>
-                                <a href='https://www.instagram.com/p/DP8kuAZkkmy/?img_index=1&igsh=enpiamIwbmZ1aGF5' target='_blank' rel='noopener noreferrer' onClick={handleInnerLinkClick}>17기 회고 및 18기 Lead 각오 Instagram 게시물 보기</a>
-                            </li>
-                        </ul> */}
+                        <label>2026.11.14 ~ 2027.03.13</label>
                     </div>
                 </div>
             </div>
