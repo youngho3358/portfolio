@@ -27,9 +27,9 @@ const Header = ({ isMobile, onAboutMeClick, onSkillsClick, onArchivingClick, onP
   const navItems = [
     { label: 'About Me', onClick: onAboutMeClick },
     { label: 'Skills', onClick: onSkillsClick },
-    { label: 'Archiving', onClick: onArchivingClick },
     { label: 'Projects', onClick: onProjectClick },
     { label: 'Activities', onClick: onActivitiesClick },
+    { label: 'Archiving', onClick: onArchivingClick },
   ];
 
   const headerContainerClass = isScrolled ? 'header_container2' : 'header_container';
