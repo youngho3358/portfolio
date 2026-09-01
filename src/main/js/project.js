@@ -2,11 +2,28 @@ import { forwardRef, useEffect, useState } from 'react';
 import './../css/project.css';
 
 const RUNCOMBI_IMG_LIST = [
-    `${process.env.PUBLIC_URL}/img/project/project_runcombi1.png`,
-    `${process.env.PUBLIC_URL}/img/project/project_runcombi2.png`,
-    `${process.env.PUBLIC_URL}/img/project/project_runcombi3.png`,
-    `${process.env.PUBLIC_URL}/img/project/project_runcombi4.png`,
-    `${process.env.PUBLIC_URL}/img/project/project_runcombi5.png`
+    `${process.env.PUBLIC_URL}/img/project/runcombi/project_runcombi1.png`,
+    `${process.env.PUBLIC_URL}/img/project/runcombi/project_runcombi2.png`,
+    `${process.env.PUBLIC_URL}/img/project/runcombi/project_runcombi3.png`,
+    `${process.env.PUBLIC_URL}/img/project/runcombi/project_runcombi4.png`,
+    `${process.env.PUBLIC_URL}/img/project/runcombi/project_runcombi5.png`
+];
+
+const CMC_ATTENDANCE_IMG_LIST = [
+    `${process.env.PUBLIC_URL}/img/project/cmc_attendance/project_cmc_attendance1.png`,
+    `${process.env.PUBLIC_URL}/img/project/cmc_attendance/project_cmc_attendance2.png`,
+    `${process.env.PUBLIC_URL}/img/project/cmc_attendance/project_cmc_attendance3.png`,
+    `${process.env.PUBLIC_URL}/img/project/cmc_attendance/project_cmc_attendance4.png`,
+    `${process.env.PUBLIC_URL}/img/project/cmc_attendance/project_cmc_attendance5.png`,
+    `${process.env.PUBLIC_URL}/img/project/cmc_attendance/project_cmc_attendance6.png`,
+    `${process.env.PUBLIC_URL}/img/project/cmc_attendance/project_cmc_attendance7.png`,
+    `${process.env.PUBLIC_URL}/img/project/cmc_attendance/project_cmc_attendance8.png`,
+    `${process.env.PUBLIC_URL}/img/project/cmc_attendance/project_cmc_attendance9.png`,
+    `${process.env.PUBLIC_URL}/img/project/cmc_attendance/project_cmc_attendance10.png`,
+    `${process.env.PUBLIC_URL}/img/project/cmc_attendance/project_cmc_attendance11.png`,
+    `${process.env.PUBLIC_URL}/img/project/cmc_attendance/project_cmc_attendance12.png`,
+    `${process.env.PUBLIC_URL}/img/project/cmc_attendance/project_cmc_attendance13.png`,
+    `${process.env.PUBLIC_URL}/img/project/cmc_attendance/project_cmc_attendance14.png`,
 ];
 
 const Project = forwardRef((props, ref) => {
@@ -29,6 +46,27 @@ const Project = forwardRef((props, ref) => {
     }, []);
     /**
      * Runcombi 이미지 fade out, fade in 처리 종료
+     */
+
+    /**
+     * CMC 출석앱 이미지 fade out, fade in 처리 시작
+     */
+    const [cmcAttendanceImgIndex, setCmcAttendanceImgIndex] = useState(0);
+    const [cmcAttendanceFade, setCmcAttendanceFade] = useState(false);
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setCmcAttendanceFade(true); // 페이드아웃 시작
+
+            setTimeout(() => {
+                setCmcAttendanceImgIndex(prev => (prev + 1) % CMC_ATTENDANCE_IMG_LIST.length);
+                setCmcAttendanceFade(false); // 페이드인 시작
+            }, 300);
+        }, 3000); // 3초마다 이미지 전환
+        return () => clearInterval(interval);
+    }, []);
+    /**
+     * CMC 출석앱 이미지 fade out, fade in 처리 종료
      */
 
     return (
@@ -200,6 +238,27 @@ const Project = forwardRef((props, ref) => {
                     </div>
                 </div>
 
+                {/* CMC 동아리 출석 서버 개발 */}
+                <div className="project-card">
+                    <div className="project-card-img">
+                        <img className={`project-video project-mobile-fit fade-image${cmcAttendanceFade? ' hide' : ''}`} src={CMC_ATTENDANCE_IMG_LIST[cmcAttendanceImgIndex]} alt='runcombi'/>
+                    </div>
+                    <div className="project-card-desc">
+                        <p className='project-title' style={{fontSize:'30px', marginBottom:'0px'}}>CMC 동아리 출석 서버 개발</p>
+                        <p className='project-period'>2026.05 ~ 2026.05</p>
+                        <div className='project-detail'>
+                            CMC 동아리 출석체크 관리용 웹앱의 서버를 개발을 진행하였습니다.<br/>
+                            <br/><br/>
+                            GraphQL 단일 엔드포인트와 SDL 스키마를 구성, Query/Mutation Resolver를 도메인별로 분리<br/>
+                            <br/><br/>
+                            사용자 권한 및 기수에 따라 기능을 분리하여 개발
+                            <p className='sub'>⇁ Root, Lead, Challenger 권한 분리, 각 기수 및 파트에 따라 출력되는 데이터 분리</p>
+                        </div>
+                        <p className='project-url-text'>자세한 개발내용 Notion : </p>
+                        <a className='project-address' target="_blank" rel="noreferrer" href='https://app.notion.com/p/CMC-3ce105feb9a28092a926d30a0638175d?source=copy_link'>자세한 개발 내용 확인하기</a>
+                    </div>
+                </div>
+
                 {/* DB저축은행 디지털 채널 재구축 */}
                 <div className="project-card">
                     <div className="project-card-img">
@@ -222,7 +281,7 @@ const Project = forwardRef((props, ref) => {
                             <p className='sub'>⇁ 긴급점검시 Interceptor 와 Server Session 을 활용하여 관리자는 우회 접속 및 테스트가 가능한 환경을 구성하였습니다.</p>
                             <br/>
 
-                            이외의 약 30가지 서비스 및 화면 개발
+                            이외의 약 30가지 서비스 화면 개발
                             <br/>
 
                             <p className='project-url-text'>자세한 개발내용 Notion : </p>

@@ -70,7 +70,7 @@ const Aboutme = forwardRef((props, ref) => {
           <div className="icon"><BsFillPencilFill size={50} /></div>
           <div> 
             <div className="label">학력</div>
-            <div className="value">&nbsp;수원대학교 - 행정학과</div>
+            <div className="value">&nbsp;수원대학교 졸업</div>
           </div>
         </div>
       </div>

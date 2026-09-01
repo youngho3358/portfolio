@@ -1,10 +1,36 @@
 import './../css/activities.css';
-import { forwardRef } from 'react';
+import { forwardRef, useEffect, useState } from 'react';
 
 const Activities = forwardRef((props, ref) => {
     const handleInnerLinkClick = (event) => {
         event.stopPropagation();
     };
+
+    const CMC_IMG_LIST = [
+        `${process.env.PUBLIC_URL}/img/activities/CMC_18th.png`,
+        `${process.env.PUBLIC_URL}/img/activities/CMC_19th.png`
+    ];
+
+    /**
+     * CMC 출석앱 이미지 fade out, fade in 처리 시작
+     */
+    const [cmcImgIndex, setCmcImgIndex] = useState(0);
+    const [cmcImgFade, setCmcImgFade] = useState(false);
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setCmcImgFade(true); // 페이드아웃 시작
+
+            setTimeout(() => {
+                setCmcImgIndex(prev => (prev + 1) % CMC_IMG_LIST.length);
+                setCmcImgFade(false); // 페이드인 시작
+            }, 300);
+        }, 3000); // 3초마다 이미지 전환
+        return () => clearInterval(interval);
+    }, []);
+    /**
+     * CMC 출석앱 이미지 fade out, fade in 처리 종료
+     */
 
     return (
         <div ref={ref} className="activities-container">
@@ -80,7 +106,7 @@ const Activities = forwardRef((props, ref) => {
                 </div>
                 <div className="activities-card" onClick={() => { window.open('https://cmc.makeus.in/', '_blank') }}>
                     <div className="activities-img">
-                        <img src={`${process.env.PUBLIC_URL}/img/activities/CMC_18th.png`} alt='CMC' />
+                        <img className={`project-video project-mobile-fit fade-image${cmcImgFade? ' hide' : ''}`} src={CMC_IMG_LIST[cmcImgIndex]} alt='runcombi'/>
                     </div>
                     <div className="activities-description">
                         수익형 앱런칭 동아리 CMC 18기, 19기 Server Lead 활동<br />
