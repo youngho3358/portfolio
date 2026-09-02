@@ -72,7 +72,7 @@ const Project = forwardRef((props, ref) => {
     return (
         <div ref={ref} className="project-container">
             <div className="project-header">
-                <div>PROJECTS</div>
+                <h2>PROJECTS</h2>
             </div>
             <div className="project-content">
 
@@ -82,7 +82,7 @@ const Project = forwardRef((props, ref) => {
                         <video className='project-video' src={`${process.env.PUBLIC_URL}/video/coin_investment.mp4`} alt='coin_investment' controls/>
                     </div>
                     <div className="project-card-desc">
-                        <p className='project-title'>COIN_INVESTMENT</p>
+                        <h3 className='project-title'>COIN_INVESTMENT</h3>
                         <p className='project-period'>2024.04.11 ~ 2024.04.26</p>
                         <div className='project-detail'>
                             Upbit 사이트에서 제공되는 코인의 가격을 기준으로 사용자가<br/>
@@ -105,7 +105,7 @@ const Project = forwardRef((props, ref) => {
                         <video className='project-video' src={`${process.env.PUBLIC_URL}/video/muzinut.mp4`} alt='muzinut' controls/>
                     </div>
                     <div className="project-card-desc">
-                        <p className='project-title'>Muzinut</p>
+                        <h3 className='project-title'>Muzinut</h3>
                         <p className='project-period'>2024.06.02 ~ 2024.08.02</p>
                         <div className='project-detail'>
                             뮤지션들이 자유롭게 자신의 음악 작업물을 게시하고<br/>
@@ -130,7 +130,7 @@ const Project = forwardRef((props, ref) => {
                         <video className='project-video' src={`${process.env.PUBLIC_URL}/video/portfolio.mp4`} alt='portfolio' controls/>
                     </div>
                     <div className="project-card-desc">
-                        <p className='project-title'>Portfolio</p>
+                        <h3 className='project-title'>Portfolio</h3>
                         <p className='project-period'>2024.08.15 ~ 2024.08.30</p>
                         <div className='project-detail'>
                             직접 구현한 프로젝트들을 정리하여 포트폴리오 사이트를<br/>
@@ -150,7 +150,7 @@ const Project = forwardRef((props, ref) => {
                         <video className='project-video' src={`${process.env.PUBLIC_URL}/video/randomchat.mp4`} alt='randomchat' controls/>
                     </div>
                     <div className="project-card-desc">
-                        <p className='project-title' style={{fontSize:'30px', marginBottom:'0px'}}>Randomchat</p>
+                        <h3 className='project-title' style={{fontSize:'30px', marginBottom:'0px'}}>Randomchat</h3>
                         <p className='project-period'>2024.11.15 ~ 2024.12.31</p>
                         <div className='project-detail'>
                             랜덤한 유저와 화상 채팅을 할 수 있는 토이 프로젝트 입니다.<br/>
@@ -176,7 +176,7 @@ const Project = forwardRef((props, ref) => {
                         <img className='project-video project-mobile-fit' src={`${process.env.PUBLIC_URL}/img/project/project_shinhan.png`} alt='shinhan'/>
                     </div>
                     <div className="project-card-desc">
-                        <p className='project-title' style={{fontSize:'30px', marginBottom:'0px'}}>신한은행 SOL Bank 챗봇 고도화</p>
+                        <h3 className='project-title' style={{fontSize:'30px', marginBottom:'0px'}}>신한은행 SOL Bank 챗봇 고도화</h3>
                         <p className='project-period'>2025.02 ~ 2025.04</p>
                         <div className='project-detail'>
                             신한은행 SOL Bank 앱 내 챗봇 고도화 프로젝트 입니다.<br/>
@@ -197,7 +197,7 @@ const Project = forwardRef((props, ref) => {
                         <img className={`project-video project-mobile-fit fade-image${runcombiFade? ' hide' : ''}`} src={RUNCOMBI_IMG_LIST[runcombiImgIndex]} alt='runcombi'/>
                     </div>
                     <div className="project-card-desc">
-                        <p className='project-title' style={{fontSize:'30px', marginBottom:'0px'}}>Runcombi</p>
+                        <h3 className='project-title' style={{fontSize:'30px', marginBottom:'0px'}}>Runcombi</h3>
                         <p className='project-period'>2025.06 ~ 2025.08</p>
                         <div className='project-detail'>
                             CMC 동아리 내에서 개발하고 현재까지 서비스 중인 어플리케이션 입니다.<br/>
@@ -222,7 +222,7 @@ const Project = forwardRef((props, ref) => {
                         <video className='project-video project-mobile-fit' src={`${process.env.PUBLIC_URL}/video/korailtalk.mov`} alt='korailtalk' controls/>
                     </div>
                     <div className="project-card-desc">
-                        <p className='project-title' style={{fontSize:'30px', marginBottom:'0px'}}>코레일톡 앱 리뉴얼</p>
+                        <h3 className='project-title' style={{fontSize:'30px', marginBottom:'0px'}}>코레일톡 앱 리뉴얼</h3>
                         <p className='project-period'>2025.05 ~ 2026.01</p>
                         <div className='project-detail'>
                             새롭게 런칭되는 코레일톡 앱의 WebView 및 Bridge 개발을 진행하였습니다.<br/>
@@ -244,7 +244,7 @@ const Project = forwardRef((props, ref) => {
                         <img className={`project-video project-mobile-fit fade-image${cmcAttendanceFade? ' hide' : ''}`} src={CMC_ATTENDANCE_IMG_LIST[cmcAttendanceImgIndex]} alt='runcombi'/>
                     </div>
                     <div className="project-card-desc">
-                        <p className='project-title' style={{fontSize:'30px', marginBottom:'0px'}}>CMC 동아리 출석 서버 개발</p>
+                        <h3 className='project-title' style={{fontSize:'30px', marginBottom:'0px'}}>CMC 동아리 출석 서버 개발</h3>
                         <p className='project-period'>2026.05 ~ 2026.05</p>
                         <div className='project-detail'>
                             CMC 동아리 출석체크 관리용 웹앱의 서버를 개발을 진행하였습니다.<br/>
@@ -266,7 +266,7 @@ const Project = forwardRef((props, ref) => {
                         {/* <div className='project-video' style={{width:'694.87px', height:'230px', textAlign:'center', paddingTop:'220px', fontSize:'25px', fontWeight:'bold'}}> - 프로젝트 진행중 -</div> */}
                     </div>
                     <div className="project-card-desc">
-                        <p className='project-title' style={{fontSize:'30px', marginBottom:'0px'}}>DB저축은행 디지털채널 재구축</p>
+                        <h3 className='project-title' style={{fontSize:'30px', marginBottom:'0px'}}>DB저축은행 디지털채널 재구축</h3>
                         <p className='project-period'>2026.01 ~ 2026.08</p>
                         <div className='project-detail'>
                             새롭게 런칭되는 DB저축은행 앱의 Server 와 Front 개발을 진행하였습니다.<br/>
@@ -283,10 +283,9 @@ const Project = forwardRef((props, ref) => {
 
                             이외의 약 30가지 서비스 화면 개발
                             <br/>
-
-                            <p className='project-url-text'>자세한 개발내용 Notion : </p>
-                            <a className='project-address' target="_blank" rel="noreferrer" href='https://app.notion.com/p/DB-3c6105feb9a2800b8fedf4b9bc08eccf?source=copy_link' >자세한 개발 내용 확인하기</a>
                         </div>
+                        <p className='project-url-text'>자세한 개발내용 Notion : </p>
+                            <a className='project-address' target="_blank" rel="noreferrer" href='https://app.notion.com/p/DB-3c6105feb9a2800b8fedf4b9bc08eccf?source=copy_link' >자세한 개발 내용 확인하기</a>
                     </div>
                 </div>
 
@@ -297,7 +296,7 @@ const Project = forwardRef((props, ref) => {
                         <div className='project-video' style={{width:'694.87px', height:'230px', textAlign:'center', paddingTop:'220px', fontSize:'25px', fontWeight:'bold'}}> - 프로젝트 진행중 -</div>
                     </div>
                     <div className="project-card-desc">
-                        <p className='project-title' style={{fontSize:'30px', marginBottom:'0px'}}>KB국민은행 코어뱅킹 현대화(비대면)</p>
+                        <h3 className='project-title' style={{fontSize:'30px', marginBottom:'0px'}}>KB국민은행 코어뱅킹 현대화(비대면)</h3>
                         <p className='project-period'>2026.09 ~ 2028.01</p>
                         <div className='project-detail'>
 

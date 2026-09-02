@@ -5,10 +5,10 @@ const Top = () => {
         <>
             <div className='top_container'>
                 
-                <p className='top-text' style={{fontSize:'100px',margin:'0'}}>
+                <h1 className='top-text' style={{fontSize:'100px',margin:'0'}}>
                     안녕하세요.<br></br>
                     개발자 전영호입니다.
-                </p>
+                </h1>
         
             </div>
         </>

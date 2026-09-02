@@ -35,7 +35,7 @@ const Activities = forwardRef((props, ref) => {
     return (
         <div ref={ref} className="activities-container">
             <div className="activities-header">
-                <div>ACTIVITIES</div>
+                <h2>ACTIVITIES</h2>
             </div>
             <div className="activities-content">
                 <div className="activities-card" onClick={() => { window.open('http://www.kgitbank.kr/', '_blank') }}>
@@ -106,7 +106,7 @@ const Activities = forwardRef((props, ref) => {
                 </div>
                 <div className="activities-card" onClick={() => { window.open('https://cmc.neordinary.com/', '_blank') }}>
                     <div className="activities-img">
-                        <img className={`project-video project-mobile-fit fade-image${cmcImgFade? ' hide' : ''}`} src={CMC_IMG_LIST[cmcImgIndex]} alt='runcombi'/>
+                        <img className={`fade-image${cmcImgFade? ' hide' : ''}`} src={CMC_IMG_LIST[cmcImgIndex]} alt='runcombi'/>
                     </div>
                     <div className="activities-description">
                         수익형 앱런칭 동아리 CMC 18기, 19기 Server Lead 활동<br />

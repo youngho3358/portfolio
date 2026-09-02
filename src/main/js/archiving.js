@@ -5,7 +5,7 @@ const Archiving = forwardRef((props, ref) => {
     return(
         <div ref={ref} className="archiving-container">
             <div className="archiving-header">
-                <div>ARCHIVING</div>
+                <h2>ARCHIVING</h2>
             </div>
             <div className="archiving-content">
                 <div className='archive-card'>

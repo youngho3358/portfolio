@@ -10,8 +10,14 @@
     font-size: 55px;
     padding-top: 30px;
     border-bottom: 1px solid gray;
-    font-weight: bold;
+    font-weight: 900;
     height: 90px;
+  }
+
+  .skill-header h2 {
+    margin: 0;
+    font-size: inherit;
+    font-weight: inherit;
   }
   
   .skill-content {

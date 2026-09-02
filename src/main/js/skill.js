@@ -47,7 +47,7 @@ const skills = [
     return (
       <div ref={ref} className="skill-container">
         <div className="skill-header">
-          <div>SKILLS</div>
+          <h2>SKILLS</h2>
         </div>
         <div className="skill-content">
           <div className="skill-column">
